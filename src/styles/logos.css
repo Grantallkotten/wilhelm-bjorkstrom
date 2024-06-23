@@ -1,0 +1,59 @@
+.big-logo-wrapper {
+  height: fit-content;
+}
+
+.big-logo-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+
+  animation: fadeIn 3s ease-in-out;
+  padding: 4vh 0;
+}
+
+.logo-text-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  color: var(--color-logo);
+  height: 20vh;
+  user-select: none;
+  animation: fadeIn 1s ease-in-out;
+
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+}
+
+.logo-text-name {
+  font-size: 3rem;
+  user-select: none;
+}
+
+.logo-text-master {
+  height: 2rem;
+  width: 100%;
+
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 1050px) {
+  .big-logo-content svg {
+    min-width: 70vw;
+    min-height: 70vw;
+    margin: 0;
+  }
+
+  .logo-text-wrapper {
+    margin: 0;
+    height: fit-content;
+  }
+
+  .logo-text-name {
+    display: none;
+    margin: 0;
+  }
+}

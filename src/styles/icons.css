@@ -1,0 +1,11 @@
+.logo-socials {
+  fill: var(--color-logo);
+  transition: var(--transition-speed);
+
+  &:hover {
+    fill: var(--color-2);
+    transition: var(--transition-speed);
+    filter: grayscale(10%);
+    transform: scale(var(--svg-scale-normal));
+  }
+}

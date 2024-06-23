@@ -13,12 +13,14 @@ function App() {
   return (
     <BrowserRouter>
       <Nav />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="/projects:" element={<Projects />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <section className="content-wrapper">
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/projects:" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </section>
     </BrowserRouter>
   );
 }
