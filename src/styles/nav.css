@@ -7,11 +7,10 @@
   z-index: 2;
 
   position: fixed;
-  background-color: var(--color-bg-1);
+  background-color: var(--background-color-primary);
   transition: width var(--transition-speed) ease;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 0px solid var(--color-1);
 }
 
 .navbar-ul {
@@ -35,11 +34,12 @@
 }
 
 .navbar-item:last-child {
-  background-color: var(--color-5);
+  background-color: var(--purple-color-primary);
 }
 
 .navbar-a {
   display: flex;
+  justify-content: center;
   align-items: center;
   text-align: center;
   height: 12vh;
@@ -57,7 +57,7 @@
 
 .navbar-a:hover {
   filter: grayscale(0%) opacity(1);
-  background: var(--color-3);
+  background: var(--gray-color-primary);
 }
 
 .navbar-a:hover .navbar-svg {
@@ -72,22 +72,21 @@
 
 .navbar-svg {
   margin: 0 1.5rem;
-  font-size: 10px;
-  color: var(--color-1);
-  transform: scale(1.5);
 }
 
 .navbar-svg-item {
   fill: var(--text-primary);
+  width: 2vw;
+  height: 2vw;
 }
 
 .active-svg-item {
-  fill: var(--color-logo);
+  fill: var(--blue-color-primary);
 }
 
 #logo-path-svg {
   width: 1.5rem;
-  fill: var(--color-logo);
+  fill: var(--blue-color-primary);
 }
 
 .navbar-logo {
@@ -98,26 +97,13 @@
   margin-bottom: 1rem;
   text-align: center;
   color: var(--text-secondary);
-  background-color: var(--color-bg-2);
+  background-color: var(--background-color-secondary);
   width: 100%;
 }
 
 .navbar-a:hover #logo-path-svg {
-  transform: rotate(10deg) scale(2);
+  transform: rotate(10deg) scale(1.5);
   transition: var(--transition-speed);
-}
-
-.navbar-ul::-webkit-scrollbar {
-  width: 0.6vw;
-}
-
-.navbar-ul::-webkit-scrollbar-track {
-  background-color: var(--color-3);
-}
-
-.navbar-ul::-webkit-scrollbar-thumb {
-  background-color: var(--color-5);
-  border-radius: 6px;
 }
 
 /* Small screens */
@@ -160,7 +146,7 @@
     top: 0;
     left: 0;
 
-    width: 4.5rem;
+    width: var(--nav-width);
     height: 100vh;
     border-top-right-radius: var(--border-radius-small);
   }
@@ -168,11 +154,14 @@
   .navbar:hover {
     width: 20rem;
   }
+  .navbar:hover .navbar-a {
+    justify-content: flex-start;
+  }
 
   .navbar:hover .link-text {
     display: block;
     transition: width 800ms ease;
-    color: var(--color-1);
+    color: var(--text-primary);
   }
 
   .navbar-item:last-child {

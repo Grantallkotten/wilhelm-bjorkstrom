@@ -10,7 +10,7 @@ import "../styles/socials.css";
 function HomeSocials() {
   return (
     <section>
-      <div class="logo-socials-wapper">
+      <div className="logo-socials-wapper">
         <GithubLink />
         <LinkedinLink />
         <InstagramLinlk />

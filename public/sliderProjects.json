@@ -1,0 +1,51 @@
+[
+  {
+    "date": "2024-01-01",
+    "header": "My webpage",
+    "path": "",
+    "imgHref": "./img/logo.png",
+    "text": "This webpage is made completely from the ground up using, HTML, PHP, CSS and JavaScript."
+  },
+  {
+    "date": "2023-12-21",
+    "header": "A Procedural World Generation",
+    "path": "./projects/procedural_world.php",
+    "imgHref": "./img/project_img/procedural_world/procedural_world_1.png",
+    "text": "Procedural world generation implemented using Blender's Geometry Nodes"
+  },
+  {
+    "date": "2023-12-18",
+    "header": "Face recognition utilizing image processing",
+    "path": "./projects/face_recognition.php",
+    "imgHref": "./img/project_img/face_recognition/face_recognition_5.jpg",
+    "text": "A program developed in MATLAB for face recognition utilizing image processing"
+  },
+  {
+    "date": "2023-11-22",
+    "header": "Global illumination using ray tracing",
+    "path": "./projects/global _illumination.php",
+    "imgHref": "./img/project_img/global _illumination/global_illumination_1.jpg",
+    "text": "An implementation in C++ for a ray tracer including photon mapping for transparent spheres."
+  },
+  {
+    "date": "2023-10-20",
+    "header": "Secure web login and RSA communication",
+    "path": "./projects/secure_webchat.php",
+    "imgHref": "./img/project_img/secure_webchat/secure_webchat_1.jpg",
+    "text": "A chat server where accounts can chat with each other protected from external listeners"
+  },
+  {
+    "date": "2023-05-29",
+    "header": "Mystery Run",
+    "path": "./projects/mystery_run.php",
+    "imgHref": "./img/project_img/mystery_run/mystery_run_1.jpg",
+    "text": "A multiplayer game app utilizing augmented reality and the player's GPS. The game takes inspiration from Geocaching and Pokémon Go and lets the user play murder mysteries to convict the murderer."
+  },
+  {
+    "date": "2023-03-06",
+    "header": "Billiard simulation in Three.js",
+    "path": "./projects/billiard_simulation.php",
+    "imgHref": "./img/project_img/billiard_simulation/billiard_simulation_1.PNG",
+    "text": "A physical simulation of a billiard game using three.js and Euler approximation"
+  }
+]

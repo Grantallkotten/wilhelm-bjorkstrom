@@ -4,55 +4,51 @@
 /*======================== Global var ========================*/
 :root {
   font-family: "Calibri";
-  font-size: 3vh;
-  background-color: var(--color-bg-1);
+  font-size: 1.2rem;
+  background-color: var(--background-color-primary);
 
-  --color-shadow: #00000060;
-  --shadow-box-x: -1rem 0 3rem var(--color-shadow);
+  --shadow-color: #00000060;
+  --shadow-box-x: -1rem 0 1rem var(--shadow-color);
 
   --text-primary: #ffffff;
-  --text-secondary: #000000;
+  --text-colored: #596fbd;
 
-  --color-bg-1: #22252a;
-  --color-bg-1-transp: #22252a;
-  --color-bg-2: #292c33;
-  --color-bg-2-transp: #292c337c;
+  --background-color-primary: #22252a;
+  --background-color-secondary: #292c33;
 
-  --transp-color: #7f95e552;
+  --blue-color-primary: #596fbd;
+  --blue-color-secondary: #4d5d99;
+  --purple-color-primary: #52547d;
 
-  --color-1: #cdd7ef;
-  --color-2: #7f95e5;
-  --color-3: #46474c;
-  --color-4: #989ba9;
-  --color-5: #52547d;
-
-  --color-card: #6f719f;
-
-  --color-logo: #596fbd;
+  --gray-color-primary: #46474c;
 
   --transition-speed: 200ms;
+  --transition-speed-slow: 300ms;
+  --transition-speed-realy-slow: 500ms;
 
   --border-radius-small: 8px;
   --border-radius-big: 16px;
 
   --svg-scale-small: 1.05;
   --svg-scale-normal: 1.1;
+
+  --nav-width: 4.5rem;
 }
 
 /*======================== Global CSS ========================*/
 
 svg {
-  fill: var(--color-logo);
+  fill: var(--blue-color-primary);
 }
 
 body {
-  background-color: var(--color-bg-1);
+  background-color: var(--background-color-primary);
   margin: 0;
   color: var(--text-primary);
 }
 
 .content-wrapper {
-  padding-left: 5rem;
+  padding-left: var(--nav-width);
 }
 
 h1 {

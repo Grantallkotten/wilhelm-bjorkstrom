@@ -1,0 +1,135 @@
+:root {
+  /*Hover translation*/
+  --hover-translate: 260px;
+}
+
+.slider-wrapper {
+  padding-bottom: 2vh;
+  margin-right: 0.8vw;
+
+  height: 100%;
+}
+
+.slider {
+  color: var(--text-primary);
+  display: flex;
+  padding: 3vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.card {
+  /* For slide in */
+  opacity: 0;
+
+  display: flex;
+  flex-direction: column;
+  width: 70vh;
+  height: 88vh;
+  min-height: fit-content;
+  padding: 1.5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+
+  /*To distinguis  cards from each other*/
+  background-color: var(--blue-color-secondary);
+  border-radius: var(--border-radius-small);
+  box-shadow: var(--shadow-box-x);
+  transition: var(--transition-speed);
+}
+
+.card:hover {
+  transform: translateY(-1rem);
+  background-color: var(--blue-color-primary);
+  color: var(--text-primary);
+  transition: background-color var(--transition-speed-slow) ease-in-out;
+}
+
+/* All siblings after the hoverd card */
+.card:hover ~ .card {
+  transform: translateX(var(--hover-translate));
+  transition: var(--transition-speed);
+}
+/* : means the oposit */
+.card:not(:first-child) {
+  margin-left: calc(0px - var(--hover-translate));
+}
+
+.card-content {
+  background-color: var(--background-color-secondary);
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius-small);
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.card-content img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius-small);
+  display: block;
+  object-fit: cover;
+
+  background: linear-gradient(
+    to bottom right,
+    var(--background-color-secondary),
+    #44465a
+  );
+}
+
+.slider::-webkit-scrollbar {
+  width: 0.6vw;
+  height: 16px;
+}
+
+.slider::-webkit-scrollbar-track {
+  background-color: var(--gray-color-primary);
+}
+
+.slider::-webkit-scrollbar-thumb {
+  background-color: var(--blue-color-primary);
+}
+
+/* Small screens */
+@media only screen and (max-width: 1050px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 80vw;
+    width: 80vw;
+    min-width: 240px;
+    min-height: 500px;
+  }
+
+  .card-header p {
+    display: none;
+  }
+
+  /* : means the oposit */
+  .card:not(:first-child) {
+    margin-left: calc(-22px);
+  }
+
+  /* All siblings after the hoverd card */
+  .card:hover ~ .card {
+    transform: translateX(-0.4 * var(--hover-translate));
+    transition: var(--transition-speed);
+  }
+
+  h2 {
+    font-size: 12px;
+  }
+
+  .slider::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 1050px) {
+  .card {
+    min-width: 500px;
+  }
+}

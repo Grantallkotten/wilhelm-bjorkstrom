@@ -1,0 +1,54 @@
+.transparent-button {
+  color: var(--text-primary);
+  font-weight: 400;
+
+  min-width: fit-content;
+  width: 18vw;
+  height: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--blue-color-secondary);
+  border-radius: 20px;
+
+  cursor: pointer;
+  transition: var(--transition-speed) ease-in-out;
+
+  &:hover {
+    color: var(--blue-color-secondary);
+    transition: var(--transition-speed) ease-in-out;
+    border: 1px solid var(--blue-color-primary);
+  }
+}
+
+.button-icon::before {
+  content: " ";
+  display: inline-block;
+}
+
+.arrow-icon {
+  animation: sclaeArrow 2s infinite;
+}
+
+@keyframes sclaeArrow {
+  0% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(4px);
+  }
+  40% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .transparent-button {
+    padding: 0 0.5rem;
+  }
+}

@@ -1,9 +1,14 @@
 .logo-socials {
-  fill: var(--color-logo);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  fill: var(--blue-color-primary);
   transition: var(--transition-speed);
 
   &:hover {
-    fill: var(--color-2);
+    fill: var(--blue-color-secondary);
     transition: var(--transition-speed);
     filter: grayscale(10%);
     transform: scale(var(--svg-scale-normal));
