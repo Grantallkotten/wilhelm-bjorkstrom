@@ -20,6 +20,10 @@
   --blue-color-secondary: #4d5d99;
   --purple-color-primary: #52547d;
 
+  --blue-color-primary-transparent: rgba(89, 111, 189, 0.5);
+  --blue-color-secondary-transparent: rgba(77, 93, 153, 0.5);
+  --purple-color-primary-transparent: rgba(82, 84, 125, 0.5);
+
   --gray-color-primary: #46474c;
 
   --transition-speed: 200ms;
@@ -33,6 +37,9 @@
   --svg-scale-normal: 1.1;
 
   --nav-width: 4.5rem;
+
+  --padding-small: 4px;
+  --padding-medium: 8px;
 }
 
 /*======================== Global CSS ========================*/

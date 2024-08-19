@@ -1,3 +1,40 @@
 .home-startpage {
   height: 100vh;
 }
+
+.about-me-home-wrapper {
+  height: 80vh;
+  background-color: var(--background-color-secondary);
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  width: 100%;
+}
+
+.about-me-home-left,
+.about-me-home-right {
+  width: 50%;
+  position: relative;
+}
+
+.about-me-home-left {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.about-me-home-left-button {
+  width: 100%;
+}
+
+.about-me-img {
+  border-radius: 50%;
+  height: 25vw;
+  width: 25vw;
+  background-color: white;
+  overflow: hidden;
+  position: absolute;
+}

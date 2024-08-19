@@ -2,10 +2,10 @@ import React from "react";
 
 import "../styles/buttons.css";
 
-function TransparentButton({ text, icon, onClick, style, className }) {
+function TextButton({ text, icon, onClick, style, className, iconClassName }) {
   return (
     <section
-      className={`transparent-button ${className}`}
+      className={`text-button ${className}`}
       onClick={onClick}
       style={style}
     >
@@ -15,4 +15,4 @@ function TransparentButton({ text, icon, onClick, style, className }) {
   );
 }
 
-export default TransparentButton;
+export default TextButton;

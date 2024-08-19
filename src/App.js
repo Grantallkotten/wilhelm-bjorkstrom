@@ -5,6 +5,7 @@ import Home from "./pages/Home.js";
 import Projects from "./pages/Projects.js";
 import About from "./pages/About.js";
 import Contact from "./pages/Contact.js";
+import Footer from "./footer/Footer.js";
 
 import "./styles/app.css";
 import "./styles/root.css";
@@ -21,6 +22,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </section>
+      <Footer />
     </BrowserRouter>
   );
 }

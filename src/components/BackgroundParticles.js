@@ -43,7 +43,7 @@ const particleData = () => {
     },
     particles: {
       number: {
-        value: 200,
+        value: 400,
         density: {
           enable: true,
         },

@@ -1,12 +1,8 @@
 :root {
-  /*Hover translation*/
   --hover-translate: 260px;
 }
 
 .slider-wrapper {
-  padding-bottom: 2vh;
-  margin-right: 0.8vw;
-
   height: 100%;
 }
 
@@ -16,6 +12,7 @@
   padding: 3vw;
   overflow-x: scroll;
   overflow-y: hidden;
+  height: 100%;
 }
 
 .card {

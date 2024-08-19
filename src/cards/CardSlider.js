@@ -1,11 +1,48 @@
-import React, { useEffect } from "react";
-
+import React, { useState, useEffect, useRef } from "react";
 import "../styles/card-slider.css";
 
+// Component to represent each card
+const Card = ({ project }) => {
+  return (
+    <a href={project.path} className="card slideInAllWhenvisible">
+      <header className="card-header">
+        <p>{project.date}</p>
+        <h2>{project.header}</h2>
+        <p>{project.text}</p>
+      </header>
+      <section className="card-content">
+        <img src={project.imgHref} alt="" />
+      </section>
+    </a>
+  );
+};
+
 function CardSlider() {
+  const [projects, setProjects] = useState([]);
+  const sliderRef = useRef(null);
+
   useEffect(() => {
-    // Function to be called when the target element is intersecting
-    function handleIntersectionAndSlideIn(entries, observer) {
+    // Fetch JSON data from the public directory
+    const fetchProjects = async () => {
+      try {
+        const response = await fetch("/sliderProjects.json");
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        setProjects(data);
+      } catch (error) {
+        console.error("Error fetching or parsing JSON:", error);
+      }
+    };
+
+    fetchProjects();
+  }, []);
+
+  useEffect(() => {
+    if (!sliderRef.current) return;
+
+    const handleIntersectionAndSlideIn = (entries, observer) => {
       let isVisible = false;
       for (const entry of entries) {
         if (entry.isIntersecting) {
@@ -29,9 +66,8 @@ function CardSlider() {
         observer.unobserve(element); // Unobserve each element once it's set to slide in
         time += 60;
       });
-    }
+    };
 
-    // Set up the Intersection Observer
     const intersectionOptions = {
       root: null,
       rootMargin: "0px",
@@ -43,57 +79,28 @@ function CardSlider() {
       intersectionOptions
     );
 
-    const sliderSection = document.querySelector(".slider");
-    if (!sliderSection) {
-      console.error("Slider section not found");
-      return;
-    }
+    const targetElementsSlideIn = sliderRef.current.querySelectorAll(
+      ".slideInAllWhenvisible"
+    );
 
-    // Fetch JSON data from the public directory
-    fetch("/sliderProjects.json")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        data.forEach((project) => {
-          const projectLink = document.createElement("a");
-          projectLink.setAttribute("href", project.path);
-          projectLink.classList.add("card", "slideInAllWhenvisible");
+    targetElementsSlideIn.forEach((element) => {
+      observerSlideIn.observe(element);
+    });
 
-          const headerSection = document.createElement("header");
-          headerSection.classList.add("card-header");
-          headerSection.innerHTML = `<p>${project.date}</p><h2>${project.header}</h2><p>${project.text}</p>`;
-
-          const contentSection = document.createElement("section");
-          contentSection.classList.add("card-content");
-          contentSection.innerHTML = `<img src="${project.imgHref}" alt="" />`;
-
-          projectLink.appendChild(headerSection);
-          projectLink.appendChild(contentSection);
-
-          sliderSection.appendChild(projectLink);
-        });
-
-        // Target all elements with the class "slideInAllWhenvisible"
-        const targetElementsSlideIn = document.querySelectorAll(
-          ".slider .slideInAllWhenvisible"
-        );
-
-        targetElementsSlideIn.forEach((element) => {
-          observerSlideIn.observe(element);
-        });
-      })
-      .catch((error) =>
-        console.error("Error fetching or parsing JSON:", error)
-      );
-  }, []);
+    return () => {
+      targetElementsSlideIn.forEach((element) => {
+        observerSlideIn.unobserve(element);
+      });
+    };
+  }, [projects]);
 
   return (
     <section className="slider-wrapper">
-      <div className="slider"></div>
+      <div className="slider" ref={sliderRef}>
+        {projects.map((project) => (
+          <Card key={project.path} project={project} />
+        ))}
+      </div>
     </section>
   );
 }
