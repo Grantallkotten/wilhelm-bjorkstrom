@@ -1,9 +1,9 @@
 import React from "react";
 
-import GithubLink from "./icons/GithubLink";
-import LinkedinLink from "./icons/LinkedinLink";
-import InstagramLinlk from "./icons/InstagramLinlk";
-import MailLink from "./icons/MailLink";
+import GithubLink from "../assets/icons/GithubLink";
+import LinkedinLink from "../assets/icons/LinkedinLink";
+import InstagramLinlk from "../assets/icons/InstagramLinlk";
+import MailLink from "../assets/icons/MailLink";
 
 import "../styles/socials.css";
 

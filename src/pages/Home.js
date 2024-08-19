@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import BigLogo from "../components/BigLogo";
 import LogoName from "../components/LogoName";
 import HomeSocials from "../components/HomeSocials";
-import CardSlider from "../cards/CardSlider";
+import CardSlider from "../components/showcaseProjects/CardSlider";
 
 import TransparentButton from "../components/TransparentButton";
 import BackgroundParticles from "../components/BackgroundParticles";

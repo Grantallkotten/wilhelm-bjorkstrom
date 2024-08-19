@@ -1,14 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
-import "../styles/card-slider.css";
+
+import "../../styles/card-slider.css";
 
 // Component to represent each card
 const Card = ({ project }) => {
   return (
-    <a href={project.path} className="card slideInAllWhenvisible">
+    <a
+      href={`projects/${project.filename}`}
+      className="card slideInAllWhenvisible"
+    >
       <header className="card-header">
         <p>{project.date}</p>
         <h2>{project.header}</h2>
-        <p>{project.text}</p>
+        <p>{project.description}</p>
       </header>
       <section className="card-content">
         <img src={project.imgHref} alt="" />
@@ -22,15 +26,25 @@ function CardSlider() {
   const sliderRef = useRef(null);
 
   useEffect(() => {
-    // Fetch JSON data from the public directory
+    // Retrive JSON data from the public directory
     const fetchProjects = async () => {
       try {
-        const response = await fetch("/sliderProjects.json");
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const data = await response.json();
-        setProjects(data);
+        // Import the manifest file to get the list of JSON filenames
+        const manifestModule = await import("../../assets/data/manifest.json");
+        const manifest = manifestModule.default;
+
+        // Create an array of promises to dynamically import each JSON file
+        const importPromises = manifest.map(async (filename) => {
+          const module = await import(
+            `../../assets/data/projectData/${filename}`
+          );
+          return module.default;
+        });
+
+        const allProjects = await Promise.all(importPromises);
+        const projectData = allProjects.flat();
+
+        setProjects(projectData);
       } catch (error) {
         console.error("Error fetching or parsing JSON:", error);
       }
@@ -97,8 +111,8 @@ function CardSlider() {
   return (
     <section className="slider-wrapper">
       <div className="slider" ref={sliderRef}>
-        {projects.map((project) => (
-          <Card key={project.path} project={project} />
+        {projects.map((project, index) => (
+          <Card key={index} project={project} />
         ))}
       </div>
     </section>

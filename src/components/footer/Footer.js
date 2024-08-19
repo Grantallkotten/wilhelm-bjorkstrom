@@ -1,11 +1,11 @@
 import React from "react";
 
-import GithubLink from "../components/icons/GithubLink";
-import LinkedinLink from "../components/icons/LinkedinLink";
-import InstagramLinlk from "../components/icons/InstagramLinlk";
-import MailLink from "../components/icons/MailLink";
+import GithubLink from "../../assets/icons/GithubLink";
+import LinkedinLink from "../../assets/icons/LinkedinLink";
+import InstagramLinlk from "../../assets/icons/InstagramLinlk";
+import MailLink from "../../assets/icons/MailLink";
 
-import "../styles/footer.css";
+import "../../styles/footer.css";
 
 function Footer() {
   return (
