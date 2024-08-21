@@ -2,34 +2,24 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import SelectProject from "../components/showcaseProjects/SelectProject";
+import { fetchProjectData } from "../assets/util/fetchProjectData.js";
+
 import "../styles/projects.css";
 
 const NoData = () => {
-  return <section>:(</section>;
+  return <section className="project-wrapper">No data</section>;
 };
 
 const ShowProject = ({ filename }) => {
   const [fileData, setFileData] = useState(null);
 
   useEffect(() => {
-    const fetchProjectData = async () => {
-      try {
-        const module = await import(
-          `../assets/data/projectData/${filename}.json`
-        );
-        const newFileData = module.default;
-        setFileData(newFileData);
-      } catch (error) {
-        console.error("Error importing file:", error);
-      }
-    };
-
-    fetchProjectData();
+    fetchProjectData(filename, setFileData);
   }, [filename]);
 
   return (
     <section className="project-wrapper">
-      {fileData ? <div>{fileData.filename}</div> : <NoData />}
+      {fileData ? <div>Showing data for {fileData.filename}</div> : <NoData />}
     </section>
   );
 };
