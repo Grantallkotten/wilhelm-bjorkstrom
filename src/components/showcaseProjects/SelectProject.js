@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { fetchAllProjectData } from "../../assets/util/fetchAllProjectData.js";
 import { setupSlideInAllWhenvisible } from "../../assets/util/setupSlideInAllWhenvisible.js";
+import { Link } from "react-router-dom";
 
 function SelectProject() {
   const [fileData, setFileData] = useState([]);
@@ -22,13 +23,20 @@ function SelectProject() {
 
   return (
     <section className="project-wrapper">
+      <section className="select-project-banner" />
       SelectProject from
-      <div ref={slideinRef}>
-        {fileData.map((file, index) => (
-          <div key={index} className="slideInAllWhenvisible">
-            {file.header}
-          </div>
-        ))}
+      <div ref={slideinRef} className="select-project-container">
+        <div className="select-project-container-row">
+          {fileData.map((file, index) => (
+            <Link
+              to={`/projects/${file.filename}`}
+              key={index}
+              className="select-project-card slideInAllWhenvisible"
+            >
+              {file.header}
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );

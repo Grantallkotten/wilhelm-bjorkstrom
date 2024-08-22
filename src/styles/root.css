@@ -26,6 +26,7 @@
 
   --gray-color-primary: #46474c;
 
+  --transition-speed-fast: 100ms;
   --transition-speed: 200ms;
   --transition-speed-slow: 300ms;
   --transition-speed-realy-slow: 500ms;
@@ -40,6 +41,11 @@
 
   --padding-small: 4px;
   --padding-medium: 8px;
+
+  --margin-small: 4px;
+  --margin-medium: 8px;
+
+  --gap-big: 24px;
 }
 
 /*======================== Global CSS ========================*/

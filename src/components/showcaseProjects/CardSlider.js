@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { setupSlideInAllWhenvisible } from "../../assets/util/setupSlideInAllWhenvisible";
 
 import "../../styles/card-slider.css";
@@ -6,8 +7,8 @@ import "../../styles/card-slider.css";
 // Component to represent each card
 const Card = ({ project }) => {
   return (
-    <a
-      href={`projects/${project.filename}`}
+    <Link
+      to={`/projects/${project.filename}`}
       className="card slideInAllWhenvisible"
     >
       <header className="card-header">
@@ -18,7 +19,7 @@ const Card = ({ project }) => {
       <section className="card-content">
         <img src={project.imgHref} alt="" />
       </section>
-    </a>
+    </Link>
   );
 };
 
