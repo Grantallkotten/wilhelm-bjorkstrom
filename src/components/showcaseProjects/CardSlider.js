@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { setupSlideInAllWhenvisible } from "../../assets/util/setupSlideInAllWhenvisible";
 
 import "../../styles/card-slider.css";
 
@@ -54,58 +55,13 @@ function CardSlider() {
   }, []);
 
   useEffect(() => {
-    if (!sliderRef.current) return;
-
-    const handleIntersectionAndSlideIn = (entries, observer) => {
-      let isVisible = false;
-      for (const entry of entries) {
-        if (entry.isIntersecting) {
-          isVisible = true;
-          break;
-        }
-      }
-
-      if (!isVisible) return;
-
-      const targetElementsSlideIn = document.querySelectorAll(
-        ".slider .slideInAllWhenvisible"
-      );
-
-      let time = 0;
-      targetElementsSlideIn.forEach((element) => {
-        setTimeout(() => {
-          element.classList.add("slideIn");
-          element.style.opacity = "1";
-        }, time);
-        observer.unobserve(element); // Unobserve each element once it's set to slide in
-        time += 60;
-      });
-    };
-
-    const intersectionOptions = {
+    const cleanup = setupSlideInAllWhenvisible(sliderRef, {
       root: null,
       rootMargin: "0px",
       threshold: 0.05,
-    };
-
-    const observerSlideIn = new IntersectionObserver(
-      handleIntersectionAndSlideIn,
-      intersectionOptions
-    );
-
-    const targetElementsSlideIn = sliderRef.current.querySelectorAll(
-      ".slideInAllWhenvisible"
-    );
-
-    targetElementsSlideIn.forEach((element) => {
-      observerSlideIn.observe(element);
     });
 
-    return () => {
-      targetElementsSlideIn.forEach((element) => {
-        observerSlideIn.unobserve(element);
-      });
-    };
+    return cleanup;
   }, [projects]);
 
   return (

@@ -8,7 +8,8 @@ function Nav() {
 
   const isActive = (path) => {
     const locationSegments = location.pathname.split("/").filter(Boolean);
-    const currentPath = "/" + locationSegments[0];
+    const currentPath = "/" + (locationSegments[0] ? locationSegments[0] : "");
+
     return currentPath === path;
   };
 
