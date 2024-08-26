@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/waveContainer.css";
+import "../styles/wave-container.css";
 
 export function WaveContainerRight({ children }) {
   return (

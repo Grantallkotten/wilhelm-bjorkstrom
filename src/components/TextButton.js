@@ -2,7 +2,7 @@ import React from "react";
 
 import "../styles/buttons.css";
 
-function TextButton({ text, icon, onClick, style, className, iconClassName }) {
+function TextButton({ text, icon, onClick, style, className }) {
   return (
     <section
       className={`text-button ${className}`}

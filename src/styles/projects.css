@@ -66,12 +66,16 @@
 .select-project-card {
   opacity: 0;
   width: max;
-  height: 400px;
+  height: 500px;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
 
   background-color: var(--background-color-primary);
 
   border-radius: var(--border-radius-small);
-  padding: var(--border-radius-small);
 
   color: inherit;
   text-decoration: none;
@@ -81,4 +85,74 @@
 .select-project-card:hover {
   scale: var(--svg-scale-small);
   box-shadow: 0 0 10px 8px var(--blue-color-secondary);
+}
+
+.select-project-card img {
+  width: 100%;
+  height: 50%;
+  display: block;
+  object-fit: cover;
+
+  border-radius: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.select-project-card-content {
+  margin: var(--margin-medium);
+  height: 50%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.select-project-card-content h2 {
+  margin: var(--margin-medium) 0;
+}
+
+.select-project-card-content p {
+  flex: 1;
+  margin: 0;
+}
+
+.select-project-card-svg {
+  position: relative;
+  height: 15%;
+  width: 100%;
+  border-radius: inherit;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.select-project-card-svg svg {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  filter: drop-shadow(var(--shadow-box-x));
+  z-index: 0;
+  border-radius: inherit;
+}
+
+.select-project-card-svg .text {
+  position: absolute;
+  z-index: 1;
+  width: 40%;
+  text-align: center;
+  margin: var(--margin-medium);
+
+  display: flex;
+  justify-content: center;
+  gap: var(--margin-medium);
+}
+
+.select-project-card .select-project-card-svg .arrow {
+  transition: transform 200ms ease-in-out;
+}
+.select-project-card:hover .select-project-card-svg .arrow {
+  transform: translateX(4px);
 }

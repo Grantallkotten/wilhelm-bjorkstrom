@@ -2,7 +2,7 @@
   "filename": "dummy",
   "date": "2024-01-01",
   "header": "Dummy data",
-  "main_image": "",
+  "main_image": "/images/image.jpg",
   "images": [],
   "description": "Text text"
 }
