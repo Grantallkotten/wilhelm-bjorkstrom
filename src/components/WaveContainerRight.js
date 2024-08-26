@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/waveContainer.css";
 
-export function WaveContainer({ children }) {
+export function WaveContainerRight({ children }) {
   return (
     <section className="wave-container">
       <svg viewBox="0 0 500 150" preserveAspectRatio="none">
@@ -10,9 +10,10 @@ export function WaveContainer({ children }) {
           className="svgStyle"
         ></path>
       </svg>
-      <div className="wave-container-content"> {children}</div>
+
+      <div className="wave-container-content-right"> {children}</div>
     </section>
   );
 }
 
-export default WaveContainer;
+export default WaveContainerRight;

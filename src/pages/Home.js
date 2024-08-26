@@ -7,7 +7,7 @@ import CardSlider from "../components/showcaseProjects/CardSlider";
 
 import TransparentButton from "../components/TransparentButton";
 import BackgroundParticles from "../components/BackgroundParticles";
-import WaveContainer from "../components/WaveContainer";
+import WaveContainerRight from "../components/WaveContainerRight";
 import TextButton from "../components/TextButton";
 
 import "../styles/home.css";
@@ -66,9 +66,9 @@ function Home() {
           </div>
         </div>
         <div className="about-me-home-right">
-          <WaveContainer>
+          <WaveContainerRight>
             <div className="about-me-img"></div>
-          </WaveContainer>
+          </WaveContainerRight>
         </div>
       </div>
       <div ref={scrollToRef} style={{ height: "fit-content" }}>

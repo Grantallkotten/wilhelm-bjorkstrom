@@ -44,6 +44,7 @@
 
   --margin-small: 4px;
   --margin-medium: 8px;
+  --margin-big: 32px;
 
   --gap-big: 24px;
 }
@@ -67,6 +68,7 @@ body {
 h1 {
   font-size: 2.5rem;
   padding-top: 0.8vh;
+  margin: var(--margin-big) 0;
 }
 
 h2 {

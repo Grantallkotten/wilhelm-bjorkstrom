@@ -7,6 +7,41 @@
   background-color: var(--background-color-secondary);
 }
 
+.top-wave-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.top-wave-container {
+  position: absolute;
+  width: 100%;
+
+  display: flex;
+}
+
+.div-wave-padding {
+  width: 50%;
+  height: 90px;
+}
+
+.div-wave-wrapper {
+  width: 50%;
+  height: 90px;
+}
+
+.my-projects-wrapper {
+  margin: 0 var(--margin-big);
+  height: 40vh;
+}
+
+.my-projects-wrapper h1 {
+  margin-top: 0;
+}
+
+.select-project-text {
+  height: 500px;
+}
+
 .select-project-container {
   background-color: var(--background-color-secondary);
   margin: var(--margin-medium);
@@ -31,7 +66,7 @@
 .select-project-card {
   opacity: 0;
   width: max;
-  height: 30vh;
+  height: 400px;
 
   background-color: var(--background-color-primary);
 
@@ -45,4 +80,5 @@
 
 .select-project-card:hover {
   scale: var(--svg-scale-small);
+  box-shadow: 0 0 10px 8px var(--blue-color-secondary);
 }

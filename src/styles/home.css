@@ -23,7 +23,7 @@ h1 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-left: 2rem;
+  margin-left: var(--margin-big);
 }
 
 .about-me-home-left-button {

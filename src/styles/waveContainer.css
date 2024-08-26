@@ -19,14 +19,39 @@
   fill: var(--blue-color-secondary);
 }
 
-.wave-container-content {
+.wave-container-content-left {
   position: relative;
   z-index: 1;
 
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 
   width: 90%;
   height: 100%;
+}
+
+.wave-container-content-right {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 90%;
+  height: 100%;
+}
+
+.wave-container-content-top {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 80%;
+  margin-left: 20%;
+  height: 60%;
 }
