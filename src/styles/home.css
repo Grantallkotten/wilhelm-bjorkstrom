@@ -2,6 +2,12 @@
   height: 100vh;
 }
 
+.home-scroll-button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .about-me-home-wrapper {
   height: 80vh;
   background-color: var(--background-color-secondary);

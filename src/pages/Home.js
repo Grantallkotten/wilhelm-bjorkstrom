@@ -32,9 +32,7 @@ function Home() {
           <LogoName />
           <HomeSocials />
         </BackgroundParticles>
-        <div
-          style={{ width: "100%", display: "flex", justifyContent: "center" }}
-        >
+        <div className="home-scroll-button-wrapper">
           <TransparentButton
             text={"My projects"}
             className={"down-arrow-infinite-icon"}

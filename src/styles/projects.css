@@ -136,6 +136,8 @@
   filter: drop-shadow(var(--shadow-box-x));
   z-index: 0;
   border-radius: inherit;
+
+  transition: all var(--transition-speed) ease-in-out;
 }
 
 .select-project-card-svg .text {
@@ -150,8 +152,12 @@
   gap: var(--margin-medium);
 }
 
+.select-project-card:hover .select-project-card-svg svg {
+  filter: drop-shadow(0 0 10px var(--blue-color-secondary));
+}
+
 .select-project-card .select-project-card-svg .arrow {
-  transition: transform 200ms ease-in-out;
+  transition: transform var(--transition-speed) ease-in-out;
 }
 .select-project-card:hover .select-project-card-svg .arrow {
   transform: translateX(4px);
