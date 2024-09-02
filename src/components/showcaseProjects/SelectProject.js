@@ -39,7 +39,7 @@ function SelectProject() {
         key={index}
         className="select-project-card slideInAllWhenvisible"
       >
-        <img src={projectData.main_image} alt="image" />
+        <img src={projectData.main_image.link} alt="Project" />
         <div className="select-project-card-content">
           <h2>{projectData.header}</h2>
           <p>{projectData.description}</p>
@@ -65,7 +65,7 @@ function SelectProject() {
           <div className="top-wave-container">
             <div className="div-wave-padding"></div>
             <div className="div-wave-wrapper">
-              <WaveContainerTop>MORE</WaveContainerTop>
+              <WaveContainerTop></WaveContainerTop>
             </div>
           </div>
         </section>

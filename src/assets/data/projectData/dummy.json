@@ -1,8 +1,24 @@
 {
   "filename": "dummy",
+  "banner_image": { "link": "/images/image.jpg" },
   "date": "2024-01-01",
+  "developers": 2,
+  "links": [
+    {
+      "type": "GitHub",
+      "link": "https://github.com/"
+    },
+    {
+      "type": "ll",
+      "link": "https://github.com/"
+    }
+  ],
+  "keywords": ["Hello", "Good day", "A wonderful night"],
   "header": "Dummy data",
-  "main_image": "/images/image.jpg",
+  "main_image": {
+    "link": "/images/image.jpg",
+    "description": "An image"
+  },
   "images": [],
   "description": "Text text"
 }

@@ -5,12 +5,25 @@
   text-decoration: none;
 
   fill: var(--blue-color-primary);
-  transition: var(--transition-speed);
+  transition: all var(--transition-speed) ease-in-out;
 
   &:hover {
     fill: var(--blue-color-secondary);
-    transition: var(--transition-speed);
     filter: grayscale(10%);
     transform: scale(var(--svg-scale-normal));
+  }
+}
+
+.logo-deleoper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  fill: var(--blue-color-primary);
+  transition: all 300ms ease-in-out;
+
+  &:hover {
+    filter: grayscale(30%);
   }
 }

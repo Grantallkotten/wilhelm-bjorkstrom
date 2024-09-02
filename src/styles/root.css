@@ -32,6 +32,7 @@
   --transition-speed-realy-slow: 500ms;
 
   --border-radius-small: 8px;
+  --border-radius-medium: 12px;
   --border-radius-big: 16px;
 
   --svg-scale-small: 1.05;
@@ -46,7 +47,9 @@
   --margin-medium: 8px;
   --margin-big: 32px;
 
-  --gap-big: 24px;
+  --gap-small: 4px;
+  --gap-medium: 8px;
+  --gap-big: 16px;
 }
 
 /*======================== Global CSS ========================*/
@@ -91,6 +94,15 @@ h2 {
 
 .hidden {
   opacity: 0;
+}
+
+.scribe {
+  font-family: "Caveat";
+
+  animation: wideIn 4.5s;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: default;
 }
 
 /* Small screens */
@@ -209,7 +221,7 @@ h2 {
   }
 }
 
-@keyframes typing {
+@keyframes wideIn {
   0% {
     width: 0;
   }
