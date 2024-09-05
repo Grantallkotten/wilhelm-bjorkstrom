@@ -53,6 +53,8 @@
 
 #navbar-logo {
   filter: opacity(1);
+  display: flex;
+  gap: 5%;
 }
 
 .navbar-a:hover {
@@ -85,7 +87,9 @@
 }
 
 #logo-path-svg {
-  width: 1.5rem;
+  width: 3vw;
+  height: 3vw;
+
   fill: var(--blue-color-primary);
 }
 

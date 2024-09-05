@@ -44,7 +44,7 @@
   --padding-medium: 8px;
 
   --margin-small: 4px;
-  --margin-medium: 8px;
+  --margin-medium: 16px;
   --margin-big: 32px;
 
   --gap-small: 4px;
@@ -83,9 +83,10 @@ h2 {
   animation: slideInFromBottom 0.6s ease-in-out;
 }
 
-.typeIn {
+.draw {
   opacity: 1;
-  animation: typing 3s ease-in-out;
+  animation: drawText 5s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .fadeIn {
@@ -94,15 +95,6 @@ h2 {
 
 .hidden {
   opacity: 0;
-}
-
-.scribe {
-  font-family: "Caveat";
-
-  animation: wideIn 4.5s;
-  white-space: nowrap;
-  overflow: hidden;
-  cursor: default;
 }
 
 /* Small screens */
@@ -221,13 +213,14 @@ h2 {
   }
 }
 
-@keyframes wideIn {
+@keyframes drawText {
   0% {
-    width: 0;
+    width: 0%;
   }
-  30% {
-    width: 0;
+  10% {
+    width: 0%;
   }
+
   100% {
     width: 100%;
   }

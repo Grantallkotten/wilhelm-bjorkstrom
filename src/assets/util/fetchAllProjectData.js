@@ -10,7 +10,7 @@ export async function fetchAllProjectData(setFileData) {
         {
           filename: projectData.filename,
           header: projectData.header,
-          description: projectData.description,
+          description_short: projectData.description_short,
           main_image: projectData.main_image,
         },
       ]);

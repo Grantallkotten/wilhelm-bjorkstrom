@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 
 import SelectProject from "../components/showcaseProjects/SelectProject";
@@ -7,6 +7,8 @@ import { fetchProjectData } from "../assets/util/fetchProjectData.js";
 import DeveloperIcon from "../assets/icons/DeveloperIcon.js";
 import GithubLink from "../assets/icons/GithubLink.js";
 import ExternalLink from "../assets/icons/ExternalLink.js";
+
+import { setupDrawAllWhenvisible } from "../assets/util/setupDrawAllWhenvisible.js";
 
 import "../styles/projects.css";
 
@@ -25,18 +27,30 @@ const ProjectLinkIcon = (linkItem) => {
 };
 
 const Project = ({ fileData }) => {
+  const drawRef = useRef(null);
+
   const numberOfDevelopers = Number.isInteger(fileData.developers)
     ? fileData.developers
     : 1;
 
+  useEffect(() => {
+    const cleanup = setupDrawAllWhenvisible(drawRef, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.05,
+    });
+
+    return cleanup;
+  }, []);
+
   return (
     <section className="project-wrapper">
       <section
-        className="select-project-banner"
+        className="project-banner"
         style={{ backgroundImage: `url(${fileData.banner_image.link})` }}
       />
       <section className="project-content-wrapper">
-        <div className="project-content">
+        <section className="project-content">
           <div className="project-header-wrapper">
             <h1 className="project-header">{fileData.header}</h1>
           </div>
@@ -56,7 +70,9 @@ const Project = ({ fileData }) => {
             <div>
               <h3 className="header">Project links</h3>
               <div className="links">
-                {fileData.links.map((linkItem) => ProjectLinkIcon(linkItem))}
+                {fileData.links.map((linkItem, index) => (
+                  <div key={index}>{ProjectLinkIcon(linkItem)}</div>
+                ))}
               </div>
             </div>
             <div>
@@ -70,7 +86,33 @@ const Project = ({ fileData }) => {
               </div>
             </div>
           </div>
-        </div>
+          <div className="project-information-content">
+            <div className="row">{fileData.description}</div>
+            <div className="grid-row">
+              <div className="left">
+                <h2>{fileData.main_image.header}</h2>
+                {fileData.main_image.description}
+              </div>
+              <div className="right">
+                <img src={fileData.main_image.link} alt="Main thing" />
+                <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+                  <path
+                    d="M100.11,-20.17 C-69.19,34.93 78.10,102.85 -21.78,175.68 L500.00,149.60 L500.00,0.00 Z"
+                    className="svgStyle"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div className="row">
+              <div className="quote-wrapper" ref={drawRef}>
+                <span className="quote drawAllWhenvisible">
+                  {fileData.quote}
+                </span>
+              </div>
+            </div>
+            <div className="row">{fileData.quote}</div>
+          </div>
+        </section>
       </section>
     </section>
   );

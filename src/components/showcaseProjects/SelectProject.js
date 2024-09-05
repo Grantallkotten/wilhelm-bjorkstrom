@@ -42,7 +42,7 @@ function SelectProject() {
         <img src={projectData.main_image.link} alt="Project" />
         <div className="select-project-card-content">
           <h2>{projectData.header}</h2>
-          <p>{projectData.description}</p>
+          <p>{projectData.description_short}</p>
         </div>
         <div className="select-project-card-svg">
           <svg viewBox="0 0 500 150" preserveAspectRatio="none">

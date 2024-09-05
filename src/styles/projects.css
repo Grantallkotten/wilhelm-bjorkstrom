@@ -22,7 +22,8 @@
   background-color: var(--background-color-secondary);
 }
 
-.select-project-banner {
+.select-project-banner,
+.project-banner {
   height: 50vh;
   background-color: var(--background-color-secondary);
 
@@ -139,7 +140,7 @@
 }
 
 .select-project-card-content {
-  margin: var(--margin-medium);
+  margin: var(--margin-small) var(--margin-medium);
   height: 50%;
 
   display: flex;
@@ -153,6 +154,7 @@
 .select-project-card-content p {
   flex: 1;
   margin: 0;
+  font-size: 0.9rem;
 }
 
 .select-project-card-svg {
@@ -211,9 +213,11 @@
   justify-content: space-between;
 }
 
-.info-grid div {
-  width: 100%;
+.info-grid > div {
+  flex: 1 1 25%;
+  max-width: 25%;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .info-grid .header {
@@ -253,9 +257,10 @@
   width: 100%;
   height: fit-content;
 
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   overflow-x: auto;
   gap: var(--gap-small);
+  cursor: default;
 }
 
 .info-grid .keywords .keyword-item {
@@ -263,10 +268,89 @@
   height: fit-content;
   white-space: nowrap;
 
-  font-size: 0.8rem;
+  font-size: 1rem;
 
   background-color: var(--blue-color-primary);
 
-  padding: calc(var(--border-radius-big) / 3) calc(var(--border-radius-big));
+  padding: calc(var(--border-radius-big) / 4) calc(var(--border-radius-big) / 2);
   border-radius: var(--border-radius-big);
+}
+
+.project-information-content {
+  margin-top: var(--margin-medium);
+  width: calc(100% - 2 * var(--margin-medium));
+
+  border-top: 2px solid var(--background-color-primary);
+}
+
+.project-information-content .row {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0 var(--margin-medium);
+}
+
+.project-information-content .grid-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "left right";
+
+  gap: var(--margin-small);
+  padding: 1rem var(--margin-medium);
+
+  background-color: var(--background-color-primary);
+}
+
+.grid-row svg {
+  position: absolute;
+  z-index: 0;
+
+  top: -1rem;
+  right: calc(-1 * var(--margin-medium));
+
+  width: calc(100% + var(--margin-medium));
+  height: calc(100% + 2rem);
+
+  filter: drop-shadow(var(--shadow-box-x));
+}
+
+.grid-row .left {
+  width: 100%;
+  grid-area: left;
+}
+
+.grid-row .right {
+  width: 100%;
+  grid-area: right;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  position: relative;
+}
+
+.grid-row .right img {
+  width: 90%;
+
+  border-radius: var(--margin-small);
+  box-shadow: 4px 4px 16px 8px var(--shadow-color);
+
+  z-index: 1;
+}
+
+.project-information-content .quote-wrapper {
+  width: 25vw;
+}
+
+.quote-wrapper .quote {
+  font-size: 2rem;
+  font-family: "Caveat";
+  color: var(--text-colored);
+
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+
+  opacity: 0;
 }
