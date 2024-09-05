@@ -10,6 +10,7 @@ const Card = ({ project }) => {
     <Link
       to={`/projects/${project.filename}`}
       className="card slideInAllWhenvisible"
+      onClick={() => window.scrollTo(0, 0)}
     >
       <header className="card-header">
         <p>{project.date}</p>
@@ -17,7 +18,7 @@ const Card = ({ project }) => {
         <p>{project.description_short}</p>
       </header>
       <section className="card-content">
-        <img src={project.imgHref} alt="" />
+        <img src={project.main_image.link} alt="" />
       </section>
     </Link>
   );

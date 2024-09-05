@@ -9,6 +9,7 @@ import GithubLink from "../assets/icons/GithubLink.js";
 import ExternalLink from "../assets/icons/ExternalLink.js";
 
 import { setupDrawAllWhenvisible } from "../assets/util/setupDrawAllWhenvisible.js";
+import { setupSlideInAllWhenvisible } from "../assets/util/setupSlideInAllWhenvisible.js";
 
 import "../styles/projects.css";
 
@@ -28,6 +29,7 @@ const ProjectLinkIcon = (linkItem) => {
 
 const Project = ({ fileData }) => {
   const drawRef = useRef(null);
+  const slidRef = useRef(null);
 
   const numberOfDevelopers = Number.isInteger(fileData.developers)
     ? fileData.developers
@@ -35,6 +37,16 @@ const Project = ({ fileData }) => {
 
   useEffect(() => {
     const cleanup = setupDrawAllWhenvisible(drawRef, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.05,
+    });
+
+    return cleanup;
+  }, []);
+
+  useEffect(() => {
+    const cleanup = setupSlideInAllWhenvisible(slidRef, {
       root: null,
       rootMargin: "0px",
       threshold: 0.05,
@@ -110,7 +122,22 @@ const Project = ({ fileData }) => {
                 </span>
               </div>
             </div>
-            <div className="row">{fileData.quote}</div>
+          </div>
+          <div className="image-grid-wrapper">
+            <div className="image-grid-content">
+              <h2>{fileData.result.header}</h2>
+              {fileData.result.description}
+              <div className="image-grid" ref={slidRef}>
+                {fileData.images.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image.link}
+                    alt={image.description}
+                    className="slideInAllWhenvisible"
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </section>
       </section>

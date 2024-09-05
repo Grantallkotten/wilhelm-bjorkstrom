@@ -38,6 +38,7 @@ function SelectProject() {
         to={`/projects/${projectData.filename}`}
         key={index}
         className="select-project-card slideInAllWhenvisible"
+        onClick={() => window.scrollTo(0, 0)}
       >
         <img src={projectData.main_image.link} alt="Project" />
         <div className="select-project-card-content">

@@ -76,6 +76,8 @@
   display: block;
   object-fit: cover;
 
+  border: none;
+
   background: linear-gradient(
     to bottom right,
     var(--background-color-secondary),
