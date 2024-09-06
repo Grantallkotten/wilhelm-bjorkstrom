@@ -410,6 +410,6 @@
 .image-grid-wrapper .image-grid img:hover {
   transform: scale(1.02);
   box-shadow: 0px 0px 16px 8px var(--shadow-color);
-  transition: transform var(--transition-speed) ease-in,
+  transition: transform var(--transition-speed-fast) ease-in,
     box-shadow var(--transition-speed-fast) ease-in;
 }
