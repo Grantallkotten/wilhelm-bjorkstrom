@@ -15,7 +15,7 @@ const Card = ({ project }) => {
       <header className="card-header">
         <p>{project.date}</p>
         <h2>{project.header}</h2>
-        <p>{project.description_short}</p>
+        <p className="description">{project.description_short}</p>
       </header>
       <section className="card-content">
         <img src={project.main_image.link} alt="" />

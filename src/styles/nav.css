@@ -115,7 +115,7 @@
   .navbar {
     bottom: 0;
     width: 100vw;
-    height: 5rem;
+    height: var(--nav-small-height);
   }
 
   .navbar-ul {
@@ -125,7 +125,7 @@
 
   .navbar-a {
     justify-content: center;
-    height: 5rem;
+    height: var(--nav-small-height);
   }
 
   .navbar-a .navbar-svg {

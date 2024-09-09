@@ -77,4 +77,17 @@
     display: none;
     margin: 0;
   }
+
+  .logo-text-master {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+
+    text-align: center;
+    margin: 0 var(--margin-medium);
+    margin-bottom: var(--margin-big);
+
+    font-size: 1rem;
+  }
 }

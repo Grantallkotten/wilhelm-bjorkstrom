@@ -87,7 +87,7 @@ const Project = ({ fileData }) => {
                 ))}
               </div>
             </div>
-            <div>
+            <div className="keywords-wrapper">
               <h3 className="header">Keywords</h3>
               <div className="keywords">
                 {fileData.keywords.map((keyword, index) => (

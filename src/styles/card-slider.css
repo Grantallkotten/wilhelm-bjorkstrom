@@ -99,7 +99,12 @@
 }
 
 /* Small screens */
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 600px) {
+  .slider-wrapper {
+    height: fit-content;
+    min-height: fit-content;
+  }
+
   .card {
     display: flex;
     flex-direction: column;
@@ -109,8 +114,19 @@
     min-height: 500px;
   }
 
-  .card-header p {
+  .card-header {
+    height: fit-content;
+    margin-bottom: var(--margin-big);
+  }
+
+  .card-header .description {
     display: none;
+  }
+
+  .card-header h2 {
+    width: 100%;
+    text-align: center;
+    order: 1;
   }
 
   /* : means the oposit */
@@ -131,10 +147,15 @@
   .slider::-webkit-scrollbar {
     display: none;
   }
+
+  .card-content {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 /* Large screens */
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 600px) {
   .card {
     min-width: 500px;
   }

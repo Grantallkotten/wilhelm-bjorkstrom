@@ -44,3 +44,52 @@ h1 {
   overflow: hidden;
   position: absolute;
 }
+
+@media only screen and (max-width: 600px) {
+  .home-startpage {
+    height: calc(100vh - var(--nav-small-height));
+  }
+
+  .about-me-home-left,
+  .about-me-home-right {
+    width: 100%;
+    position: relative;
+  }
+
+  .about-me-home-right svg {
+    display: none;
+  }
+
+  .about-me-home-wrapper {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    height: fit-content;
+
+    padding: 0;
+  }
+
+  .about-me-home-wrapper .wave-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+  }
+
+  .about-me-home-wrapper .about-me-img {
+    position: relative;
+    margin: var(--margin-big) 0;
+    padding: 0;
+
+    width: 80vw;
+    height: 80vw;
+
+    position: relative;
+  }
+}

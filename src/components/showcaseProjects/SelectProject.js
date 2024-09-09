@@ -29,14 +29,13 @@ function SelectProject() {
     return cleanup;
   }, [fileData]);
 
-  const ProjectCard = ({ projectData, index }) => {
+  const ProjectCard = ({ projectData }) => {
     const randomPath =
       topSVGPaths[Math.floor(Math.random() * topSVGPaths.length)];
 
     return (
       <Link
         to={`/projects/${projectData.filename}`}
-        key={index}
         className="select-project-card slideInAllWhenvisible"
         onClick={() => window.scrollTo(0, 0)}
       >
@@ -66,7 +65,7 @@ function SelectProject() {
           <div className="top-wave-container">
             <div className="div-wave-padding"></div>
             <div className="div-wave-wrapper">
-              <WaveContainerTop></WaveContainerTop>
+              <WaveContainerTop />
             </div>
           </div>
         </section>
@@ -83,7 +82,7 @@ function SelectProject() {
       <section ref={slideinRef} className="select-project-container">
         <div className="select-project-container-row">
           {fileData.map((projectData, index) => (
-            <ProjectCard projectData={projectData} index={index} />
+            <ProjectCard projectData={projectData} key={index} />
           ))}
         </div>
       </section>

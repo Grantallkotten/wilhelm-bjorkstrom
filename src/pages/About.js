@@ -5,7 +5,10 @@ function About() {
     <section className="about-wrapper">
       <section className="about-banner" />
       <section className="about-content-wrapper">
-        <section className="about-content"></section>
+        <section
+          className="about-content"
+          style={{ height: "100vh", position: "relative" }}
+        ></section>
       </section>
     </section>
   );

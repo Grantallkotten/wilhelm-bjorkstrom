@@ -52,6 +52,12 @@
   animation: none;
 }
 
+@media only screen and (max-width: 600px) {
+  .transparent-button {
+    width: 50vw;
+  }
+}
+
 @keyframes sclaeArrowRight {
   0% {
     transform: translateX(0px);

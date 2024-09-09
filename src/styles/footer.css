@@ -39,3 +39,9 @@ hr {
     padding-left: var(--nav-width);
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .footer-wrapper {
+    margin-bottom: var(--nav-small-height);
+  }
+}
