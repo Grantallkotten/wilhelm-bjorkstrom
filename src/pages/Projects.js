@@ -11,6 +11,8 @@ import ExternalLink from "../assets/icons/ExternalLink.js";
 import { setupDrawAllWhenvisible } from "../assets/util/setupDrawAllWhenvisible.js";
 import { setupSlideInAllWhenvisible } from "../assets/util/setupSlideInAllWhenvisible.js";
 
+import VideoContainer from "../components/VideoCard";
+
 import "../styles/projects.css";
 
 const NoData = () => {
@@ -123,10 +125,16 @@ const Project = ({ fileData }) => {
               </div>
             </div>
           </div>
+
           <div className="image-grid-wrapper">
             <div className="image-grid-content">
               <h2>{fileData.result.header}</h2>
               {fileData.result.description}
+              {fileData.video.embed_ID ? (
+                <div className="video-wrapper">
+                  <VideoContainer embedID={fileData.video.embed_ID} />
+                </div>
+              ) : null}
               <div className="image-grid" ref={slidRef}>
                 {fileData.images.map((image, index) => (
                   <img

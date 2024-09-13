@@ -33,6 +33,8 @@ function SelectProject() {
     const randomPath =
       topSVGPaths[Math.floor(Math.random() * topSVGPaths.length)];
 
+    console.log(projectData);
+
     return (
       <Link
         to={`/projects/${projectData.filename}`}
@@ -60,7 +62,7 @@ function SelectProject() {
   return (
     <section className="project-wrapper">
       <section className="select-project-banner" />
-      <section>
+      <section className="select-project-wrapper">
         <section className="top-wave-wrapper">
           <div className="top-wave-container">
             <div className="div-wave-padding"></div>
