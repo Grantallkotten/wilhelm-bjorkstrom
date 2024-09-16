@@ -33,8 +33,6 @@ function SelectProject() {
     const randomPath =
       topSVGPaths[Math.floor(Math.random() * topSVGPaths.length)];
 
-    console.log(projectData);
-
     return (
       <Link
         to={`/projects/${projectData.filename}`}

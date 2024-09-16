@@ -2,6 +2,7 @@
   width: 100%;
   height: fit-content;
   margin: 0;
+  background-color: var(--background-color-primary);
 }
 
 .about-banner {
@@ -18,17 +19,86 @@
 }
 
 .about-content-wrapper {
-  box-shadow: 0 0 64px 32px var(--background-color-secondary);
-
-  margin-bottom: var(--margin-big);
+  position: relative;
 }
 
 .about-content {
-  width: calc(100% - var(--margin-big));
+  width: calc(100%);
   height: 100%;
   min-height: 100vh;
 
   margin: 0;
 
   background-color: var(--background-color-secondary);
+}
+
+.about-content .div-wave-wrapper {
+  right: 0;
+  top: 0;
+  width: 60%;
+  height: 90px;
+  position: absolute;
+}
+
+.about-main-content-wrapper {
+  background-color: var(--background-color-primary);
+  padding-bottom: var(--margin-big);
+}
+
+.about-main-content-wrapper h1 {
+  margin-top: 0;
+}
+
+.about-main-content {
+  margin: 0 var(--margin-medium);
+}
+
+.wave-container-wrapper {
+  width: 100%;
+  height: 80vh;
+  background-color: var(--background-color-secondary);
+
+  display: flex;
+}
+
+.particle-mask {
+  height: 100%;
+  width: 100%;
+}
+
+.wave-container-wrapper .left {
+  width: 50%;
+  margin: 0 var(--margin-medium);
+}
+
+.wave-container-wrapper .right {
+  width: 50%;
+  position: relative;
+}
+
+.wave-container-wrapper .quote-wrapper {
+  width: 30vw;
+  min-width: fit-content;
+  margin: var(--margin-big) 0;
+}
+
+.quote-wrapper .quote {
+  font-size: 3rem;
+  font-family: "Caveat";
+  color: var(--text-colored);
+
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+
+  opacity: 0;
+}
+
+.about-me-img {
+  border-radius: 50%;
+  height: 25vw;
+  width: 25vw;
+  background-color: white;
+  overflow: hidden;
+  position: absolute;
 }

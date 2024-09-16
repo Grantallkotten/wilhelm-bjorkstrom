@@ -16,6 +16,5 @@
 
   border: none;
   border-radius: var(--border-radius-medium);
-  filter: drop-shadow(var(--shadow-box-x));
-  pointer-events: none;
+  box-shadow: 0 0 64px 32px var(--background-color-priamry);
 }
