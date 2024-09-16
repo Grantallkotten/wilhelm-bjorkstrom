@@ -77,21 +77,19 @@
 }
 
 .wave-container-wrapper .quote-wrapper {
-  width: 30vw;
+  width: 35vw;
   min-width: fit-content;
   margin: var(--margin-big) 0;
 }
 
 .quote-wrapper .quote {
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: "Caveat";
   color: var(--text-colored);
 
   overflow: hidden;
   display: inline-block;
   white-space: nowrap;
-
-  opacity: 0;
 }
 
 .about-me-img {

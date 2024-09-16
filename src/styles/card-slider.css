@@ -17,9 +17,6 @@
 }
 
 .card {
-  /* For slide in */
-  opacity: 0;
-
   display: flex;
   flex-direction: column;
   width: 70vh;

@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 import BigLogo from "../components/BigLogo";
 import LogoName from "../components/LogoName";
@@ -13,6 +14,7 @@ import TextButton from "../components/TextButton";
 import "../styles/home.css";
 
 function Home() {
+  const navigate = useNavigate();
   const scrollToRef = useRef(null);
 
   const scrollToRefFunction = () => {
@@ -60,6 +62,9 @@ function Home() {
               text={"About me"}
               className={"right-arrow-hover-icon"}
               icon={"🡪"}
+              onClick={() => {
+                navigate("/about");
+              }}
             />
           </div>
         </div>

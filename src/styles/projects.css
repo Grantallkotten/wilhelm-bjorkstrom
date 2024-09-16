@@ -81,6 +81,15 @@
   margin-top: 0;
 }
 
+.my-projects-wrapper .text-button {
+  margin-top: 1rem;
+  cursor: default;
+
+  &:hover {
+    color: var(--text-primary);
+  }
+}
+
 .main-wave-text {
   width: 50%;
   text-align: center;
@@ -113,7 +122,6 @@
 }
 
 .select-project-card {
-  opacity: 0;
   width: max;
   height: 500px;
 
@@ -354,15 +362,13 @@
 }
 
 .quote-wrapper .quote {
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: "Caveat";
   color: var(--text-colored);
 
   overflow: hidden;
   display: inline-block;
   white-space: nowrap;
-
-  opacity: 0;
 }
 
 .image-grid-wrapper {

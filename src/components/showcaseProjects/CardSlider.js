@@ -10,7 +10,6 @@ const Card = ({ project }) => {
     <Link
       to={`/projects/${project.filename}`}
       className="card slideInAllWhenvisible"
-      onClick={() => window.scrollTo(0, 0)}
     >
       <header className="card-header">
         <p>{project.date}</p>

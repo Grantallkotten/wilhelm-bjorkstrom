@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Nav from "./components/nav/Nav.js";
+import ScrollToTop from "./assets/util/ScrollToTop .js";
 import Home from "./pages/Home.js";
 import Projects from "./pages/Projects.js";
 import About from "./pages/About.js";
@@ -15,6 +16,7 @@ function App() {
     <BrowserRouter>
       <Nav />
       <section className="content-wrapper">
+        <ScrollToTop />
         <Routes>
           <Route index element={<Home />} />
           <Route path="/projects/:project?" element={<Projects />} />

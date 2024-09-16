@@ -89,7 +89,9 @@ function About() {
                 possibilities, and perhaps our paths will cross soon!
               </div>
               <div className="quote-wrapper" ref={drawRef}>
-                <div className="quote drawAllWhenvisible">Hej på dig</div>
+                <div className="quote drawAllWhenvisible">
+                  Thank you for taking the time to learn about me_
+                </div>
               </div>
             </div>
             <div className="right">

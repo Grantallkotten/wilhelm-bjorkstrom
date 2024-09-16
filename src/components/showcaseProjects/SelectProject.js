@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { fetchAllProjectData } from "../../assets/util/fetchAllProjectData.js";
 import { setupSlideInAllWhenvisible } from "../../assets/util/setupSlideInAllWhenvisible.js";
 import WaveContainerTop from "../WaveContainerTop.js";
+import TextButton from "../TextButton.js";
 
 import { Link } from "react-router-dom";
 
@@ -37,7 +38,6 @@ function SelectProject() {
       <Link
         to={`/projects/${projectData.filename}`}
         className="select-project-card slideInAllWhenvisible"
-        onClick={() => window.scrollTo(0, 0)}
       >
         <img src={projectData.main_image.link} alt="Project" />
         <div className="select-project-card-content">
@@ -77,6 +77,12 @@ function SelectProject() {
           in web development or intrigued by the intricacies of machine
           learning, you'll encounter a multitude of projects, each offering
           unique insights and solutions.
+          <TextButton
+            text={"Click on a project down below"}
+            className={"down-arrow-infinite-icon"}
+            style={{}}
+            icon={"🡫"}
+          />
         </div>
       </section>
       <section ref={slideinRef} className="select-project-container">
