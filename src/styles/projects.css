@@ -4,10 +4,6 @@
   margin: 0;
 }
 
-.select-project-wrapper {
-  box-shadow: 0 0 64px 32px var(--background-color-secondary);
-}
-
 .project-content-wrapper {
   width: 100%;
   height: 100%;
@@ -15,7 +11,7 @@
   display: flex;
   justify-content: center;
 
-  box-shadow: 0 0 64px 32px var(--background-color-secondary);
+  box-shadow: 0 0 64px 32px var(--shadow-color);
 }
 
 .project-content {
@@ -101,8 +97,7 @@
 
 .select-project-container {
   background-color: var(--background-color-secondary);
-  margin: var(--margin-medium);
-  margin-bottom: 0;
+  margin: var(--margin-big) var(--margin-medium);
   padding: var(--gap-big);
   border-radius: var(--border-radius-small);
 
@@ -141,7 +136,7 @@
 
 .select-project-card:hover {
   scale: var(--svg-scale-small);
-  box-shadow: 0 0 10px 8px var(--blue-color-secondary);
+  box-shadow: 0 0 10px 8px var(--shadow-color);
 }
 
 .select-project-card img {
@@ -216,9 +211,11 @@
 
 .select-project-card .select-project-card-svg .arrow {
   transition: transform var(--transition-speed) ease-in-out;
+  animation: sclaeArrowRight 2s infinite;
 }
 .select-project-card:hover .select-project-card-svg .arrow {
   transform: translateX(4px);
+  animation: none;
 }
 
 .info-grid {
@@ -362,7 +359,7 @@
 }
 
 .quote-wrapper .quote {
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Caveat";
   color: var(--text-colored);
 

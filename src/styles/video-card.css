@@ -16,5 +16,5 @@
 
   border: none;
   border-radius: var(--border-radius-medium);
-  box-shadow: 0 0 64px 32px var(--background-color-priamry);
+  box-shadow: 0 0 64px 32px var(--shadow-color);
 }

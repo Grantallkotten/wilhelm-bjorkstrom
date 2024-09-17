@@ -3,7 +3,6 @@
   height: fit-content;
   padding: 8px 0;
   background-color: var(--background-color-secondary);
-  border-top: 4px solid var(--background-color-primary);
   font-size: 0.8rem;
 
   display: flex;

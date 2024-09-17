@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+
 import { fetchAllProjectData } from "../../assets/util/fetchAllProjectData.js";
 import { setupSlideInAllWhenvisible } from "../../assets/util/setupSlideInAllWhenvisible.js";
 import WaveContainerTop from "../WaveContainerTop.js";
 import TextButton from "../TextButton.js";
 
-import { Link } from "react-router-dom";
+import "../../styles/buttons.css";
 
 function SelectProject() {
   const [fileData, setFileData] = useState([]);

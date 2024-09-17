@@ -55,6 +55,29 @@
   --gap-big: 16px;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --shadow-color: #00000060;
+    --shadow-box-x: -1rem 0 1rem var(--shadow-color);
+
+    --text-primary: #000000;
+    --text-colored: #354992;
+
+    --background-color-primary: #f7f9fc;
+    --background-color-secondary: #d8e1f6;
+
+    --blue-color-primary: #7489d6;
+    --blue-color-secondary: #596fbd;
+    --purple-color-primary: #3e4184;
+
+    --blue-color-primary-transparent: rgba(89, 111, 189, 0.5);
+    --blue-color-secondary-transparent: rgba(77, 93, 153, 0.5);
+    --purple-color-primary-transparent: rgba(82, 84, 125, 0.5);
+
+    --gray-color-primary: #46474c;
+  }
+}
+
 /*======================== Global CSS ========================*/
 
 svg {
