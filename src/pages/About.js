@@ -90,7 +90,8 @@ function About() {
               </div>
               <div className="quote-wrapper" ref={drawRef}>
                 <div className="quote drawAllWhenvisible">
-                  Thank you for taking the time to learn about me_
+                  Thank you for taking the time to learn about me!
+                  <span style={{ opacity: "0" }}>.</span>
                 </div>
               </div>
             </div>

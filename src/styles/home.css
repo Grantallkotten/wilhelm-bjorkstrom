@@ -1,5 +1,23 @@
 .home-startpage {
   height: 100vh;
+
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+
+  background-image: url("../../public/images/space.jpg");
+}
+
+.home-startpage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.343);
 }
 
 .home-scroll-button-wrapper {
@@ -36,11 +54,19 @@ h1 {
   width: 100%;
 }
 
-.about-me-img {
+.about-me-home-right .about-me-img {
   border-radius: 50%;
   height: 25vw;
   width: 25vw;
-  background-color: white;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url("../../public/images/me.jpg");
+
+  transform: scaleX(-1);
+
   overflow: hidden;
   position: absolute;
 }
