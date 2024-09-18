@@ -1,0 +1,50 @@
+{
+  "filename": "globalIllumination",
+  "banner_image": {
+    "link": "/images/projectImages/globalIllumination/global_illumination.jpg"
+  },
+  "date": "2023-11-22",
+  "developers": 2,
+  "links": [
+    {
+      "type": "GitHub",
+      "link": "https://github.com/Grantallkotten/Global-Illumination-using-Ray-Tracing"
+    },
+    {
+      "type": "GitHub",
+      "link": "https://github.com/Grantallkotten/Global-Illumination-using-Ray-Tracing/tree/monte-carlo-ray-tracing-(only)"
+    }
+  ],
+  "keywords": [" Ray tracing", "Photon mapping", "C++", "Monte Carlo"],
+  "header": "Global illumination using ray tracing",
+  "main_image": {
+    "link": "/images/projectImages/globalIllumination/global_illumination.jpg",
+    "header": "Implementation",
+    "description": "This project explores Monte Carlo ray tracing in computer graphics for photorealistic rendering, emphasizing global illumination models over older ones like Phong shading. The report discusses the Whitted ray tracing method and introduces Monte Carlo ray tracing for diffuse reflection. An implementation in C++ explores parameters' impact, including rays per pixel, shadow rays, color bleeding, illumination, noise, aliasing, and shadows. The model is enhanced with photon mapping for caustics in translucent spheres, using KD-trees and flux calculations."
+  },
+  "images": [
+    {
+      "link": "/images/projectImages/globalIllumination/global_illumination_noise.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/globalIllumination/global_illumination_photon.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/globalIllumination/global_illumination_path_tracing.jpg",
+      "header": ""
+    }
+  ],
+  "description": "This project explores Monte Carlo ray tracing in computer graphics for photorealistic rendering, emphasizing global illumination models over older ones like Phong shading. The report discusses the Whitted ray tracing method and introduces Monte Carlo ray tracing for diffuse reflection. An implementation in C++ explores parameters' impact, including rays per pixel, shadow rays, color bleeding, illumination, noise, aliasing, and shadows. The model is enhanced with photon mapping for caustics in translucent spheres, using KD-trees and flux calculations.",
+  "description_short": "This project explores Monte Carlo ray tracing and adds photon mapping for better caustics.",
+  "quote": "Check out the git and try it out!",
+  "result": {
+    "header": "Result",
+    "description": "Explore the results of our ray tracing endeavor below. The images showcase the impact of Monte Carlo ray tracing on global illumination. Take a look to see the realism our ray tracer brings to computer-generated visuals."
+  },
+  "video": {
+    "title": "",
+    "embed_ID": ""
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "filename": "prociduralWorld",
+  "banner_image": {
+    "link": "/images/projectImages/prociduralWorld/procedural_world_landscape.jpg"
+  },
+  "date": "2023-12-21",
+  "developers": 1,
+  "links": [
+    {
+      "type": "GitHub",
+      "link": "https://github.com/Grantallkotten/A-procedural-world-generation-in-Blender"
+    }
+  ],
+  "keywords": [
+    "Blender",
+    "Good day",
+    "Geometry Nodes",
+    "Controlled noise",
+    "Vorio noise"
+  ],
+  "header": "A Procidural World Generation",
+  "main_image": {
+    "link": "/images/projectImages/prociduralWorld/procedural_world.jpg",
+    "header": "Implementation",
+    "description": "Initiating the project involves establishing a grid using Blender's Noise Texture Node for controlled noise, creating mountains and valleys along the z-axis. Stratifying the terrain into layers-bedrock, stone, soil, and surface-ensures a detailed portrayal, with procedurally generated caves and lava enriching geological features. Surface division employs Voronoi patterns to define biomes, translating color information into specific environments. Snow on mountain peaks enhances realism. Vegetation on the surface, distributed with Perlin noise, varies based on biome, employing billboards for visual fidelity."
+  },
+  "images": [
+    {
+      "link": "/images/projectImages/prociduralWorld/procedural_world_desert.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/prociduralWorld/procedural_world_mountain.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/prociduralWorld/procedural_world_sky.jpg",
+      "header": ""
+    }
+  ],
+  "description": "The project aims to explore how the Blender software, particularly its Geometry Nodes feature, can be utilized to create a procedurally generated digital world that mimics real-world terrain. The primary focus is on simulating natural features such as mountains, valleys, biomes, and vegetation in a visually appealing and seemingly random manner.",
+  "description_short": "A project exploring the use of Blender's Geometry Nodes to procedurally generate realistic terrain with features like mountains, valleys, and vegetation.",
+  "quote": "Check out the git and try it out!",
+  "result": {
+    "header": "Result",
+    "description": "The created world is intricate, offering vast exploration possibilities with parameter adjustments. Its infinite, non-repeating nature makes it visually appealing. There are numerous development opportunities, such as adding more stone types, vegetation, structures, and biomes. Allowing users to define biome sizes could enhance the project further. Introducing additional noise for altering the orientation of flowers, grass, and trees would add another layer of procedural realism, resembling the real world."
+  },
+  "video": {
+    "title": "",
+    "embed_ID": ""
+  }
+}

@@ -68,7 +68,7 @@ function Contact() {
         </section>
         <div className="bottom-wave-wrapper">
           <WaveContainerBottom>
-            <span className="wave-text">Looking forward hering from you</span>
+            <span className="wave-text">Looking forward hering from you!</span>
           </WaveContainerBottom>
         </div>
       </section>
