@@ -1,47 +1,54 @@
 {
-  "filename": "globalIllumination",
+  "filename": "chatbotML",
   "banner_image": {
-    "link": "/images/projectImages/globalIllumination/global_illumination.jpg"
+    "link": "/images/projectImages/chatbotML/chatbot.jpg"
   },
-  "date": "2023-11-22",
+  "date": "2023-12-02",
   "developers": 2,
   "links": [
     {
       "type": "GitHub",
-      "link": "https://github.com/Grantallkotten/Global-Illumination-using-Ray-Tracing"
-    },
-    {
-      "type": "GitHub",
-      "link": "https://github.com/Grantallkotten/Global-Illumination-using-Ray-Tracing/tree/monte-carlo-ray-tracing-(only)"
+      "link": "https://github.com/rasmussvala/TNM108-Machine-Learning-for-Social-Media/tree/main/Project"
     }
   ],
-  "keywords": ["Ray tracing", "Photon mapping", "C++", "Monte Carlo"],
-  "header": "Global illumination using ray tracing",
+  "keywords": [
+    "TF-IDF",
+    "Cosine Similarity",
+    "Chatbot",
+    "Text Normalization",
+    "Lemmatization",
+    "Python Implementation"
+  ],
+  "header": "Chatbot using ML",
   "main_image": {
-    "link": "/images/projectImages/globalIllumination/global_illumination.jpg",
+    "link": "/images/projectImages/chatbotML/bot.jpg",
     "header": "Implementation",
-    "description": "This project explores Monte Carlo ray tracing in computer graphics for photorealistic rendering, emphasizing global illumination models over older ones like Phong shading. The report discusses the Whitted ray tracing method and introduces Monte Carlo ray tracing for diffuse reflection. An implementation in C++ explores parameters' impact, including rays per pixel, shadow rays, color bleeding, illumination, noise, aliasing, and shadows. The model is enhanced with photon mapping for caustics in translucent spheres, using KD-trees and flux calculations."
+    "description": "The chatbot is implemented in Python using TF-IDF and cosine similarity to match user queries with a preloaded dataset of questions and answers. First, the dataset is normalized by converting text to lowercase, removing special characters, and lemmatizing words. A TF-IDF vectorizer is then applied to represent both the user's input and the dataset as vectors. Cosine similarity is used to compare these vectors and determine the closest match. The chatbot retrieves the most relevant response based on this comparison. The implementation includes key functions for text normalization, vectorization, and similarity measurement, ensuring a simple yet functional conversational experience."
   },
   "images": [
     {
-      "link": "/images/projectImages/globalIllumination/global_illumination_noise.jpg",
+      "link": "/images/projectImages/chatbotML/chatbot.jpg",
       "header": ""
     },
     {
-      "link": "/images/projectImages/globalIllumination/global_illumination_photon.jpg",
+      "link": "/images/projectImages/chatbotML/code.jpg",
       "header": ""
     },
     {
-      "link": "/images/projectImages/globalIllumination/global_illumination_path_tracing.jpg",
+      "link": "/images/projectImages/chatbotML/data.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/chatbotML/TF_IDF.jpg",
       "header": ""
     }
   ],
-  "description": "This project explores Monte Carlo ray tracing in computer graphics for photorealistic rendering, emphasizing global illumination models over older ones like Phong shading. The report discusses the Whitted ray tracing method and introduces Monte Carlo ray tracing for diffuse reflection. An implementation in C++ explores parameters' impact, including rays per pixel, shadow rays, color bleeding, illumination, noise, aliasing, and shadows. The model is enhanced with photon mapping for caustics in translucent spheres, using KD-trees and flux calculations.",
-  "description_short": "This project explores Monte Carlo ray tracing and adds photon mapping for better caustics.",
+  "description": "A project focusing on building a simple chatbot in Python using TF-IDF and cosine similarity for answering user questions. A dataset of questions and answers is processed by normalizing text, lemmatizing words, and applying TF-IDF to calculate the similarity between user queries and dataset entries. The chatbot selects the best matching response and handles conversations. Key components include data preprocessing, similarity measurement, and response generation. While the chatbot performs well, further improvements could include memory for previous conversations and better handling of single-word queries to enhance interaction.",
+  "description_short": "A Python chatbot using TF-IDF and cosine similarity to match user queries with a dataset of answers, focusing on text normalization, preprocessing, and response generation for improved interaction.",
   "quote": "Check out the git and try it out!",
   "result": {
     "header": "Result",
-    "description": "Explore the results of our ray tracing endeavor below. The images showcase the impact of Monte Carlo ray tracing on global illumination. Take a look to see the realism our ray tracer brings to computer-generated visuals."
+    "description": "The chatbot performs well in matching user queries with appropriate responses using TF-IDF and cosine similarity. While it effectively handles basic conversations, occasional mismatches occur, especially with ambiguous inputs. Overall, it delivers satisfactory results but could benefit from enhancements like memory for past interactions and improved handling of single-word queries to further refine its accuracy and engagement."
   },
   "video": {
     "title": "",

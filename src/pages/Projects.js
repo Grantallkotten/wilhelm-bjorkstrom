@@ -88,6 +88,7 @@ const Project = ({ fileData }) => {
                 {fileData.links.map((linkItem, index) => (
                   <div key={index}>{ProjectLinkIcon(linkItem)}</div>
                 ))}
+                {fileData.links.length === 0 ? "-" : null}
               </div>
             </div>
             <div className="keywords-wrapper">

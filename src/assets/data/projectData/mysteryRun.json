@@ -1,47 +1,51 @@
 {
-  "filename": "globalIllumination",
+  "filename": "mysteryRun",
   "banner_image": {
-    "link": "/images/projectImages/globalIllumination/global_illumination.jpg"
+    "link": "/images/projectImages/mysteryRun/overview.jpg"
   },
-  "date": "2023-11-22",
-  "developers": 2,
-  "links": [
-    {
-      "type": "GitHub",
-      "link": "https://github.com/Grantallkotten/Global-Illumination-using-Ray-Tracing"
-    },
-    {
-      "type": "GitHub",
-      "link": "https://github.com/Grantallkotten/Global-Illumination-using-Ray-Tracing/tree/monte-carlo-ray-tracing-(only)"
-    }
+  "date": "2023-05-29",
+  "developers": 6,
+  "links": [],
+  "keywords": [
+    "GPS tracking",
+    "Unity",
+    "Multiplayer",
+    "Augmented reality",
+    "GPS Game",
+    "Bachelor project",
+    "Project Organization",
+    "Scrum"
   ],
-  "keywords": ["Ray tracing", "Photon mapping", "C++", "Monte Carlo"],
-  "header": "Global illumination using ray tracing",
+  "header": "Mystery Run",
   "main_image": {
-    "link": "/images/projectImages/globalIllumination/global_illumination.jpg",
+    "link": "/images/projectImages/mysteryRun/design.jpg",
     "header": "Implementation",
-    "description": "This project explores Monte Carlo ray tracing in computer graphics for photorealistic rendering, emphasizing global illumination models over older ones like Phong shading. The report discusses the Whitted ray tracing method and introduces Monte Carlo ray tracing for diffuse reflection. An implementation in C++ explores parameters' impact, including rays per pixel, shadow rays, color bleeding, illumination, noise, aliasing, and shadows. The model is enhanced with photon mapping for caustics in translucent spheres, using KD-trees and flux calculations."
+    "description": "Throughout the development of Mystery Run, effective project management was key to the game's success, with a strong focus on teamwork and structured workflows. The project adopted the Scrum framework, promoting an iterative and collaborative approach. This method enabled regular team meetings, sprint planning, and continuous feedback, ensuring a smooth and organized development process. The team was structured like a real-world work environment, with members assigned roles based on their expertise, including developers, designers, testers, and project managers. This setup not only reflected industry practices but also provided valuable experience in interdisciplinary collaboration and teamwork."
   },
   "images": [
     {
-      "link": "/images/projectImages/globalIllumination/global_illumination_noise.jpg",
+      "link": "/images/projectImages/mysteryRun/overview.jpg",
       "header": ""
     },
     {
-      "link": "/images/projectImages/globalIllumination/global_illumination_photon.jpg",
+      "link": "/images/projectImages/mysteryRun/play.jpg",
       "header": ""
     },
     {
-      "link": "/images/projectImages/globalIllumination/global_illumination_path_tracing.jpg",
+      "link": "/images/projectImages/mysteryRun/game.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/mysteryRun/map.jpg",
       "header": ""
     }
   ],
-  "description": "This project explores Monte Carlo ray tracing in computer graphics for photorealistic rendering, emphasizing global illumination models over older ones like Phong shading. The report discusses the Whitted ray tracing method and introduces Monte Carlo ray tracing for diffuse reflection. An implementation in C++ explores parameters' impact, including rays per pixel, shadow rays, color bleeding, illumination, noise, aliasing, and shadows. The model is enhanced with photon mapping for caustics in translucent spheres, using KD-trees and flux calculations.",
-  "description_short": "This project explores Monte Carlo ray tracing and adds photon mapping for better caustics.",
-  "quote": "Check out the git and try it out!",
+  "description": "My bachelor project, titled Mystery Run, was an innovative game app that merged the excitement of solving murder mysteries with real-world exploration. Players embarked on an immersive experience, solving intriguing cases by physically walking to different locations in real life. The app utilized geolocation technology to create a dynamic and engaging narrative that unfolded as players moved through various places, uncovering clues and piecing together the puzzle abou who is the murderer.",
+  "description_short": "Mystery Run is a geolocation-based game app where players solve murder mysteries by exploring real-world locations and gathering clues.",
+  "quote": "My bachelor project in M.Sc. Media Technology and Engineering!",
   "result": {
     "header": "Result",
-    "description": "Explore the results of our ray tracing endeavor below. The images showcase the impact of Monte Carlo ray tracing on global illumination. Take a look to see the realism our ray tracer brings to computer-generated visuals."
+    "description": "The incorporation of project management principles and Scrum methodology not only enhanced the efficiency of our development process but also instilled a sense of responsibility and accountability within the team. The development of the app not only yielded a captivating game app but also endowed us with essential skills in project management and teamwork. These skills are not only valuable for our academic endeavors but will also be instrumental in our forthcoming professional careers."
   },
   "video": {
     "title": "",
