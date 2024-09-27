@@ -101,17 +101,16 @@
 
   font-family: "Courier New", Courier, monospace;
   text-decoration: underline;
-
-  transition: all var(--transition-speed) ease-in-out;
-
-  &:hover {
-    text-shadow: 0px 0px 3px var(--text-primary);
-  }
 }
 
 .contact-griditem-social-text a {
   color: var(--text-primary);
   text-decoration: none;
+
+  transition: all var(--transition-speed) ease-in-out;
+  &:hover {
+    text-shadow: 0px 0px 3px var(--text-primary);
+  }
 }
 
 .bottom-wave-wrapper {
@@ -131,6 +130,13 @@
   text-shadow: 0px 0px 2px var(--text-primary);
 
   cursor: default;
+}
+
+@media (prefers-color-scheme: light) {
+  .wave-text {
+    color: var(--background-color-primary);
+    text-shadow: 0px 0px 2px var(--background-color-primary);
+  }
 }
 
 @media only screen and (max-width: 600px) {

@@ -2,7 +2,6 @@ import React from "react";
 
 import GithubLink from "../assets/icons/GithubLink";
 import LinkedinLink from "../assets/icons/LinkedinLink";
-import InstagramLinlk from "../assets/icons/InstagramLinlk";
 import MailLink from "../assets/icons/MailLink";
 
 import "../styles/socials.css";
@@ -13,7 +12,6 @@ function HomeSocials() {
       <div className="logo-socials-wapper">
         <GithubLink />
         <LinkedinLink />
-        <InstagramLinlk />
         <MailLink />
       </div>
     </section>

@@ -52,6 +52,12 @@
   animation: none;
 }
 
+@media (prefers-color-scheme: light) {
+  .transparent-button {
+    color: var(--background-color-primary);
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .transparent-button {
     width: 50vw;

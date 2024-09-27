@@ -1,0 +1,50 @@
+{
+  "filename": "secureWeb",
+  "banner_image": {
+    "link": "/images/projectImages/secureWeb/secure_webchat_chat.jpg"
+  },
+  "date": "2023-11-22",
+  "developers": 2,
+  "links": [
+    {
+      "type": "GitHub",
+      "link": "https://github.com/casperlarsson-bit/TNM031-Network-security-lab/tree/main/Lab%204"
+    }
+  ],
+  "keywords": ["RSA", "Node.js", "SSL", "HTTPS", "Encryption", "Websocket"],
+  "header": "Secure web login and RSA communication",
+  "main_image": {
+    "link": "/images/projectImages/secureWeb/secure_webchat_chat.jpg",
+    "header": "Implementation",
+    "description": "The implementation is built using Node.js for the backend and utilizes HTML, PHP, and CSS for the visual elements. The primary emphasis was on ensuring the security of the chat functionality. Despite prioritizing backend security, the implementation includes functional user accounts and the ability for users to add each other for chatting. During testing, the code was executed on a local host and evaluated with the assistance of Visual Studio Code's live share feature."
+  },
+  "images": [
+    {
+      "link": "/images/projectImages/secureWeb/secure_webchat_start.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/secureWeb/secure_webchat_diagram.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/secureWeb/secure_webchat_sign_in.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/secureWeb/secure_webchat_backend.jpg",
+      "header": ""
+    }
+  ],
+  "description": "The server stores everything using SQLite databases. The architecture between the tables can be seen in the image below. The different colours of the arrows indicates different users. Users create accounts and their username is saved together with their password. The password is hashed and salted using bcrypt. A user can connect to other users via a contact list which connects a user ID with another username. Each user also generates a public and private RSA key which is stored on the server. Ideally, the users would store their private keys on their machine to enable end-to-end encryption, but has not been implemented that way in this project. The public RSA key is used to encrypt messages towards the recipient, who can decrypt it using its private key.\n\nSince one user can load a conversation between two persons they would have to decrypt the entire conversation. Therefore, two encrypted versions of the messages are stored in the table, one using the current user's public key and one using the recipient's private key. This method allows both users to load the entire conversation when they log in again.\n\nThe conversation also uses a websocket for real time conversation. This would be done on a secure connection if the server is hosted using HTTPS which we did not have a valid certificate for.\n\nPrivate keys are exposed here but only used for demonstration purposes.",
+  "description_short": "A server using SQLite, bcrypt for password hashing, RSA keys for encryption, and websockets for real-time conversations. Private keys are stored insecurely for demonstration purposes.",
+  "quote": "Check out the git and try it out!",
+  "result": {
+    "header": "Result",
+    "description": "The server employs SQLite databases, securing user accounts with bcrypt-hashed passwords. Users connect through a contact list, generating RSA key pairs for encryption. Encrypted messages are stored for efficient conversation loading. Real-time conversations use websockets, and though HTTPS is recommended, a valid certificate is absent in this demonstration."
+  },
+  "video": {
+    "title": "",
+    "embed_ID": ""
+  }
+}
