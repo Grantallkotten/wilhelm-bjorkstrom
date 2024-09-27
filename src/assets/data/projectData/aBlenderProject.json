@@ -1,0 +1,55 @@
+{
+  "filename": "aBlenderProject",
+  "banner_image": {
+    "link": "/images/projectImages/aBlenderProject/final-render.jpg"
+  },
+  "date": "2022-05-10",
+  "developers": 3,
+  "links": [
+    {
+      "type": "ExternalLink",
+      "link": "https://www.youtube.com/watch?v=_JVkMAW-8Mk"
+    }
+  ],
+  "keywords": [
+    "Blender",
+    "3D modeling",
+    "Physic simulations",
+    "3D computer graphics"
+  ],
+  "header": "Below Zero: A Blender Project",
+  "main_image": {
+    "link": "/images/projectImages/aBlenderProject/first-render.jpg",
+    "header": "My first time in Blender",
+    "description": "This project was my introduction to 3D modeling, and I had to learn Blender from scratch. My primary focus was the robot itself, but I also did a lot of work with the mountain cliff and its surrounding details. I started with basic shapes, using simple geometry to build a solid, functional design. The body began as a cylinder, with rectangular blocks for the limbs. After the main structure was complete, I refined the model by adding details like lamps and components to give it a more industrial, futuristic feel. The design aimed for simplicity with an advanced edge, resembling a robot from a futuristic military force. Finally, blood spatters were added to the metal textures, suggesting a darker backstory."
+  },
+  "images": [
+    {
+      "link": "/images/projectImages/aBlenderProject/final-render.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/aBlenderProject/in-blender.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/aBlenderProject/the-first-iteration.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/aBlenderProject/first-skiss.jpg",
+      "header": ""
+    }
+  ],
+  "description": "This Blender project marked my first experience with 3D modeling, where I, and two auther team members, created a dramatic scene featuring a robot perched on a snow-covered mountain peak. The main focus was split between crafting the rugged mountain landscape and designing the robot itself. I began with basic geometric shapes to form the robot's structure, refining it with intricate details like lamps and mechanical components to give it a futuristic, military feel. The scene was further enriched by a weathered door placed beside the robot, adding an element of mystery. To convey a darker backstory, I applied blood spatters to the robot's metal surface, hinting at a violent or tragic event. The heavy snowfall and moody lighting were crucial in setting the tone, creating a tense and atmospheric environment. This project was a major step in learning Blender and 3D design, allowing me to explore both technical and creative challenges.",
+  "description_short": "A Blender project that created a dramatic scene featuring a robot on a snowy mountain peak, complete with intricate details and atmospheric elements.",
+  "quote": "Watch the video down below for the full render!",
+  "result": {
+    "header": "The final render",
+    "description": "The final render depicts the robot seated on a snow-covered mountain peak, beside a worn, ancient door. Heavy snowfall blankets the scene, enhancing the dramatic and desolate atmosphere. Blood stains on the robot’s metallic surface hint at a violent, mysterious past, adding depth and tension to the already intense setting."
+  },
+  "video": {
+    "title": "",
+    "embed_ID": "_JVkMAW-8Mk"
+  }
+}

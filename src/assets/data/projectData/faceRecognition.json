@@ -1,0 +1,69 @@
+{
+  "filename": "faceRecognition",
+  "banner_image": {
+    "link": "/images/projectImages/faceRecognition/eye_banner.jpg"
+  },
+  "date": "2023-12-18",
+  "developers": 3,
+  "links": [
+    {
+      "type": "GitHub",
+      "link": "https://github.com/Theodenlll7/TNM034_Projekt"
+    }
+  ],
+  "keywords": [
+    "MATLAB",
+    "Fisherfaces",
+    "PCA",
+    "Image processing",
+    "LDA",
+    "Viola-Jones algorithm"
+  ],
+  "header": "Face recognition utilizing image processing",
+  "main_image": {
+    "link": "/images/projectImages/faceRecognition/eye.jpg",
+    "header": "Implementation",
+    "description": "The project involves a multi-step approach to facial recognition. It begins with advance preprocessing techniques like color correction and face masking. Eye masking is introduced to improve eye detection using the circular Hough transform. Facial normalization follows, including translation, rotation, scaling, and cropping. PCA is then applied for dimension reduction and eigenface calculation. The Fisherface algorithm is employed for data preparation, including mean face computation and projection on eigenfaces. Scatter matrices are calculated for optimization, leading to the classification of faces based on minimum distances."
+  },
+  "images": [
+    {
+      "link": "/images/projectImages/faceRecognition/eye_mask.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/faceRecognition/mask.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/faceRecognition/mask_tr.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/faceRecognition/MATLAB.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/faceRecognition/eye_localisation.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/faceRecognition/normolized_face.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/faceRecognition/result.jpg",
+      "header": ""
+    }
+  ],
+  "description": "The project encompasses a comprehensive pipeline for facial recognition, integrating advanced image processing techniques and dimensionality reduction methods such as PCA and Fisherface, with a focus on optimizing feature extraction and classification for accurate results.",
+  "description_short": "The project integrates advanced image processing and dimensionality reduction techniques like PCA and Fisherface for optimized facial recognition and classification.",
+  "quote": "Check out the git and try it out!",
+  "result": {
+    "header": "Result",
+    "description": "The implementation results are visualized in a Table below. The table includes information on the type of database (DB), the count of images, total accuracy (ACC), the number of non-accepted images that should be accepted (FR), the percentage of non-accepted images (FRR), the count of falsely accepted images (FA), and the percentage of falsely accepted images (FAR). The databases used are DB0, DB1, and DB2. Additionally, images from DB1 and DB2 were subjected to transformations (T) to test the program under challenging conditions."
+  },
+  "video": {
+    "title": "",
+    "embed_ID": ""
+  }
+}

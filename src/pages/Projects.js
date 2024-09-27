@@ -24,6 +24,7 @@ const ProjectLinkIcon = (linkItem) => {
     GitHub: <GithubLink link={linkItem.link} />,
     ExternalLink: <ExternalLink link={linkItem.link} />,
   };
+
   return linkItem.link
     ? linkConponents[linkItem.type] || <ExternalLink />
     : null;
