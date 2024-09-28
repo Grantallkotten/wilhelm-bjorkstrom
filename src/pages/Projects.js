@@ -11,12 +11,26 @@ import ExternalLink from "../assets/icons/ExternalLink.js";
 import { setupDrawAllWhenvisible } from "../assets/util/setupDrawAllWhenvisible.js";
 import { setupSlideInAllWhenvisible } from "../assets/util/setupSlideInAllWhenvisible.js";
 
+import WaveContainerBottom from "../components/WaveContainerBottom.js";
+import BackgroundParticles from "../components/BackgroundParticles.js";
+
 import VideoContainer from "../components/VideoCard";
 
 import "../styles/projects.css";
 
 const NoData = () => {
-  return <section className="project-wrapper">No data</section>;
+  return (
+    <section className="project-wrapper">
+      <section className="no-data">
+        <BackgroundParticles>
+          <div className="no-data-text">
+            Sorry, I have no data for this project
+          </div>
+        </BackgroundParticles>
+        <WaveContainerBottom></WaveContainerBottom>
+      </section>
+    </section>
+  );
 };
 
 const ProjectLinkIcon = (linkItem) => {

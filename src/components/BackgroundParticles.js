@@ -21,7 +21,13 @@ export function BackgroundParticles({ children }) {
   }, []);
 
   return (
-    <section style={{ position: "relative", width: "100%", height: "100%" }}>
+    <section
+      style={{
+        position: "relative",
+        width: "100%",
+        height: "100%",
+      }}
+    >
       {init ? <Particles options={particleData()} /> : null}
       <div style={{ position: "relative", zIndex: 1 }}>{children}</div>
     </section>

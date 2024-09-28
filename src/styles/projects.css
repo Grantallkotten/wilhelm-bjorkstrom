@@ -4,6 +4,33 @@
   margin: 0;
 }
 
+.no-data {
+  height: calc(100vh - var(--nav-small-height));
+
+  font-size: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.no-data-text {
+  width: 100%;
+  height: calc(100vh - var(--nav-small-height));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-data .wave-container {
+  position: absolute;
+  height: 20vh;
+  bottom: 0;
+}
+
 .project-content-wrapper {
   width: 100%;
   height: 100%;
