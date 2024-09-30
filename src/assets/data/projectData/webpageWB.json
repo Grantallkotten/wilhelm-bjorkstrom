@@ -1,0 +1,45 @@
+{
+  "filename": "webpageWB",
+  "banner_image": {
+    "link": "/images/projectImages/webpageWB/myWebpage.jpg"
+  },
+  "date": "2024-02-12",
+  "developers": 1,
+  "links": [
+    {
+      "type": "GitHub",
+      "link": "https://github.com/rasmussvala/TNM108-Machine-Learning-for-Social-Media/tree/main/Project"
+    }
+  ],
+  "keywords": [
+    "React",
+    "UX",
+    "CSS",
+    "Creativity",
+    "Webdevelopment",
+    "Project structure"
+  ],
+  "header": "This webpage",
+  "main_image": {
+    "link": "/images/projectImages/webpageWB/myWebpage.jpg",
+    "header": "Implementation",
+    "description": "The chatbot is implemented in Python using TF-IDF and cosine similarity to match user queries with a preloaded dataset of questions and answers. First, the dataset is normalized by converting text to lowercase, removing special characters, and lemmatizing words. A TF-IDF vectorizer is then applied to represent both the user's input and the dataset as vectors. Cosine similarity is used to compare these vectors and determine the closest match. The chatbot retrieves the most relevant response based on this comparison. The implementation includes key functions for text normalization, vectorization, and similarity measurement, ensuring a simple yet functional conversational experience."
+  },
+  "images": [
+    {
+      "link": "/images/projectImages/webpageWB/chatbot.jpg",
+      "header": ""
+    }
+  ],
+  "description": "A project focusing on building a simple chatbot in Python using TF-IDF and cosine similarity for answering user questions. A dataset of questions and answers is processed by normalizing text, lemmatizing words, and applying TF-IDF to calculate the similarity between user queries and dataset entries. The chatbot selects the best matching response and handles conversations. Key components include data preprocessing, similarity measurement, and response generation. While the chatbot performs well, further improvements could include memory for previous conversations and better handling of single-word queries to enhance interaction.",
+  "description_short": "A Python chatbot using TF-IDF and cosine similarity to match user queries with a dataset of answers, focusing on text normalization, preprocessing, and response generation for improved interaction.",
+  "quote": "Check out the git and try it out!",
+  "result": {
+    "header": "Result",
+    "description": "The chatbot performs well in matching user queries with appropriate responses using TF-IDF and cosine similarity. While it effectively handles basic conversations, occasional mismatches occur, especially with ambiguous inputs. Overall, it delivers satisfactory results but could benefit from enhancements like memory for past interactions and improved handling of single-word queries to further refine its accuracy and engagement."
+  },
+  "video": {
+    "title": "",
+    "embed_ID": ""
+  }
+}

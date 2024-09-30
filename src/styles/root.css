@@ -60,21 +60,21 @@
     --shadow-color: #00000060;
     --shadow-box-x: -1rem 0 1rem var(--shadow-color);
 
-    --text-primary: #000000;
+    --text-primary: #292929;
     --text-colored: #354992;
 
     --background-color-primary: #f7f9fc;
-    --background-color-secondary: #d8e1f6;
+    --background-color-secondary: #eceff5;
 
-    --blue-color-primary: #5c74cb;
+    --blue-color-primary: #6b86e8;
     --blue-color-secondary: #7e91d8;
-    --purple-color-primary: #5b5fa7;
+    --purple-color-primary: #9397e0;
 
     --blue-color-primary-transparent: rgba(89, 111, 189, 0.5);
     --blue-color-secondary-transparent: rgba(77, 93, 153, 0.5);
     --purple-color-primary-transparent: rgba(82, 84, 125, 0.5);
 
-    --gray-color-primary: #303034;
+    --gray-color-primary: #8a8a94;
   }
 }
 

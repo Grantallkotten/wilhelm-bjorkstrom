@@ -1,4 +1,5 @@
 .home-startpage {
+  min-height: fit-content;
   height: 100vh;
 
   background-size: cover;
