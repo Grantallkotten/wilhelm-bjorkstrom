@@ -50,7 +50,7 @@ function Home() {
           <div className="about-me-home-left-text">
             I am a dedicated software developer with a passion for solving
             complex problems through code. Proficient in languages like C++,
-            JavaScript, Phyton and much more. I enjoy crafting efficient
+            JavaScript, Python and much more. I enjoy crafting efficient
             solutions and building elegant architectures. Currently pursuing a
             Master's in Media Technology at Linköping University, my studies
             have deepened my skills in programming, computer graphics, and web
