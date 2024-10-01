@@ -48,18 +48,21 @@ function Home() {
         <div className="about-me-home-left">
           <h1>Who am I?</h1>
           <div className="about-me-home-left-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.{" "}
+            I am a dedicated software developer with a passion for solving
+            complex problems through code. Proficient in languages like C++,
+            JavaScript, Phyton and much more. I enjoy crafting efficient
+            solutions and building elegant architectures. Currently pursuing a
+            Master's in Media Technology at Linköping University, my studies
+            have deepened my skills in programming, computer graphics, and web
+            development. I have a particular interest in both frontend and
+            backend work, with a focus on creating seamless user experiences.
+            With a strong foundation and a year left in my studies, I am excited
+            to contribute to impactful projects in the future.
           </div>
 
           <div className="about-me-home-left-button">
             <TextButton
-              text={"About me"}
+              text={"More about me"}
               className={"right-arrow-hover-icon"}
               icon={"🡪"}
               onClick={() => {
