@@ -22,7 +22,7 @@
     "MATLAB",
     "Euler approximation"
   ],
-  "header": "Global illumination using ray tracing",
+  "header": "A physical billiard simulation",
   "main_image": {
     "link": "/images/projectImages/physicalBilliardSimulation/lets_start.jpg",
     "header": "Implementation",
@@ -48,7 +48,7 @@
   ],
   "description": "This project aims to simulate billiards physics using WebGL and three.js, employing various physical models and numerical methods. The objective is to create a playable simulation that users can access via a web browser. The simulation integrates physical models for collision and friction for each ball, mimicking real-world properties through numerical methods. To manage complexity within the project's timeframe, specific limitations were established. The game is developed exclusively in two dimensions, which simplifies the process by omitting three-dimensional ball bouncing. Additionally, only rolling motion is permitted, excluding ball sliding. This approach streamlines development and focuses on the core mechanics of the billiards game, ensuring a smoother implementation while maintaining the essence of the gameplay experience.",
   "description_short": "A project simulating billiards physics with WebGL and three.js, creating a 2D game that incorporates collision and friction models while excluding three-dimensional bouncing and sliding for streamlined gameplay.",
-  "quote": "Check out the git and try it out!",
+  "quote": "Klick the link under Project links and try it out!",
   "result": {
     "header": "Result",
     "description": "The WebGL implementation resulted in a fully furnished room featuring a billiard table at its center, serving as the game arena. Users are greeted with a view of the billiard table upon launching the application. For guidance on game controls, users can hover over the 'How to play' icon in the top left corner, triggering a menu illustrating key controls."
