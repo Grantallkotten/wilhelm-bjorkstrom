@@ -1,0 +1,20 @@
+:root {
+  --text-primary: #ffffff;
+  --background-color-primary: #22252a;
+  --blue-color-primary: #596fbd;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-primary: #292929;
+    --background-color-primary: #f7f9fc;
+    --blue-color-primary: #6b86e8;
+  }
+}
+svg {
+  fill: var(--blue-color-primary);
+}
+
+.return {
+  transition: 200ms ease-in-out;
+}

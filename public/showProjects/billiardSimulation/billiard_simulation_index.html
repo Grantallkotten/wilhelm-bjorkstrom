@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Wilhelm Björkström</title>
+      <link rel="icon" href="../../logo.png" type="image/png">
+      <link rel="stylesheet" href="./billiard.css">
+
+    <style>
+      #game-box{
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        background-color: none;
+        transition: all 0.3s ease-in-out;
+
+      }
+      body {
+        margin: 0px;
+        font-family: "Calibri";
+
+      }
+      .return{
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0;
+        display:flex;
+        width: 18vw;
+        height: 10vh;
+        border-bottom-right-radius: 1vw;
+
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-bg-1);
+        text-decoration: none;
+        color: var(--text-primary);
+
+        transform: translate(-0.2vw, -0.2vw);
+
+      }
+      .return:hover{
+        fill: var(--blue-color-primary);
+        text-shadow: 0px 0px 3px var(--text-primary);
+        box-shadow: 0 0 0.8vw 0.2vw var(--blue-color-primary);
+      }
+
+      .return p{
+        margin: 0;
+        font-size: 1.2rem;
+        padding-right: 0.2vw;
+      }
+      .ui {
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: 2px solid #f4f4f4;
+        color: white;
+        backdrop-filter: blur(1vw);
+        font-weight: 400;
+        font-size: 100%;
+        margin: 0.4em;
+        padding: 0 0.2em;
+        text-align: center;
+      }
+      .heading {
+        font-size: 110%;
+        font-weight: 600;
+        padding-bottom: 0.2em;
+        cursor: context-menu;
+      }
+
+      #game {
+        width: 100%;      
+        height: 100%;      
+      }
+      .hide {
+        display: none;
+      }
+
+      .howerDiv:hover + .hide {
+        display: block;
+      }
+      #end-of-game {
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        display: flex;
+        color: #8eca8e;
+        text-align: center;
+        backdrop-filter: blur(1vw);
+      }
+      #end-of-game h1 {
+        font-size: 12vh;
+      }
+      #end-of-game p {
+        font-size: 4vh;
+        color: #ffffff;
+      }
+      .show-end-of-game{
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body id="game-box">
+    <a href="/projects/physicalBilliardSimulation" class="return">
+      <p>&larr; Return to project</p>
+      <svg
+      class="navbar-svg navbar-svg-item"
+      id="projects"
+      width="3vw"
+      height="3vw"
+      viewBox="0 0 26 26"
+      >
+        <path
+          d="M15.602 4.075c2.201 1.174 4.904 3.254 6.398 5.252-1.286-.9-3.011-1.027-5.058-.549.222-1.469-.185-3.535-1.34-4.703zm-.825 6.925s1.522-7-3.335-7h-5.442v20h16v-10.629c0-3.42-4.214-3.116-7.223-2.371zm-.318-8l-1.459-1h-9v20h1v-19h9.459zm-2.443-2l-1.5-1h-8.516v20h1v-19h9.016z" fill
+        />
+      </svg>
+    </a>
+    <div class="ui">
+      <div class="howerDiv"><p class="heading">Hover here for how to play</p></div>
+      <div class="hide">
+        <img
+          src="./tex/how to play.png"
+          alt="instructions.png"
+          width="320"
+          height="230"
+        />
+      </div>
+    </div>
+  </div>
+      <div id="end-of-game">
+        <div>
+          <h1 class="show-end-of-game">End of game!</h1>
+          <p class="show-end-of-game">Press R to restart</p>
+      </div>
+    </div>
+
+    <div id="game"></div>
+
+    <!--<script src="https://threejs.org/build/three.js"></script>-->
+    <script type="module" src="euler.js"></script>
+    <script type="module" src="collision.js"></script>
+    <script type="module" src="rotation.js"></script>
+    <script type="module" src="main.js"></script>
+
+    <script type="x-shader/x-vertex" id="vertexShader">
+
+      varying vec3 vWorldpos;
+      varying vec3 vNormal;
+      varying vec2 vUv;
+
+      // for built-in uniforms & attributes see https://threejs.org/docs/#api/en/renderers/webgl/WebGLProgram
+
+      void main() {
+      	vNormal = normalMatrix * normal;
+      	vUv = uv; // texture coordinates
+
+      	vec4 worldpos = modelViewMatrix * vec4(position, 1.0);
+      	vWorldpos = worldpos.xyz;
+
+      	gl_Position = projectionMatrix * worldpos;
+      }
+    </script>
+    <script type="x-shader/x-fragment" id="fragmentShader">
+
+      struct PointLight {
+      	vec3 position;
+      	vec3 color;
+      };
+      uniform PointLight pointLights[ NUM_POINT_LIGHTS ];
+      uniform vec3 ambientLightColor;
+
+      varying vec3 vWorldpos;
+      varying vec3 vNormal;
+      varying vec2 vUv;
+
+      uniform sampler2D colorTexture;
+      uniform sampler2D specularMap;
+
+
+      void main() {
+      	vec4 color = texture2D(colorTexture, vUv);
+      	vec4 specColor = texture2D(specularMap, vUv);
+
+      	vec3 normal = normalize(vNormal);
+
+      	vec3 lightDir = normalize(pointLights[0].position - vWorldpos);
+      	vec3 diffuse = max(dot(vNormal, lightDir), 0.0) * pointLights[0].color;
+
+      	//vec3 reflect = reflect(lightDir, normal);
+      	vec3 R = 2.0 * dot(normal, lightDir) * normal - lightDir;
+                   vec3 V = normalize(cameraPosition - vWorldpos);
+                   float dotRV = max(dot(R,V), 0.0);
+
+      	gl_FragColor = vec4(color.xyz * (diffuse + ambientLightColor) + specColor.xyz*pow(dotRV, 4.0), 1.0);
+      }
+    </script>
+  </body>
+</html>

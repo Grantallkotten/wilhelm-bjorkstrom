@@ -9,6 +9,10 @@
     {
       "type": "GitHub",
       "link": "https://github.com/Grantallkotten/Modeling-and-animation"
+    },
+    {
+      "type": "ExternalLink",
+      "link": "/showProjects/billiardSimulation/billiard_simulation_index.html"
     }
   ],
   "keywords": [
