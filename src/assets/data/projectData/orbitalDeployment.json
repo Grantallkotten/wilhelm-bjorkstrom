@@ -1,0 +1,62 @@
+{
+  "filename": "orbitalDeployment",
+  "banner_image": {
+    "link": "/images/projectImages/orbitalDeployment/mission.jpg"
+  },
+  "date": "2024-10-24",
+  "developers": 3,
+  "links": [
+    {
+      "type": "ExternalLink",
+      "link": "https://www.youtube.com/watch?v=OJgwkwWK7mA"
+    }
+  ],
+  "keywords": ["Godot", "AI", "Game", "GDScripts", "Wave based shooter"],
+  "header": "Orbital Deployment",
+  "main_image": {
+    "link": "/images/projectImages/orbitalDeployment/inGame.jpg",
+    "header": "The gameplay",
+    "description": "In Orbital Deployment, players engage enemies from a top-down perspective, moving through each round while fending off waves of opponents. The player can choose to spend in-game credits to purchase a variety of powerful weapons, grenades, and other survival tools between rounds. Each purchase is critical to surviving the increasingly difficult waves with waring AI enemys. Outside of the main gameplay rounds, the game offers a skill tree available in the main menu. Players can unlock and enhance core abilities, creating a unique build each game. Key choices include increasing maximum health, boosting bullet damage, earning more credits per round, and other critical advantages. Each choice made in the skill tree builds on a distinct survival strategy, allowing players to customize their playstyle to best handle the challenges ahead."
+  },
+  "images": [
+    {
+      "link": "/images/projectImages/orbitalDeployment/debuging.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/orbitalDeployment/inGame2.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/orbitalDeployment/godot.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/orbitalDeployment/loading.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/orbitalDeployment/endOfGame.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/orbitalDeployment/skillTree.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/orbitalDeployment/mission.jpg",
+      "header": ""
+    }
+  ],
+  "description": "This game is a top-down survival shooter game developed in Godot, where players take on waves of increasingly challenging enemies while upgrading their skills, weapons, and equipment. The gameplay focuses on strategic survival through progressive upgrades and well-timed purchases, enhancing both offensive and defensive capabilities.",
+  "description_short": "A top-down survival shooter where players face waves of enemies, upgrading skills, weapons, and gear to enhance strategic survival.",
+  "quote": "Check Out the Trailer Below!",
+  "result": {
+    "header": "Game trailer",
+    "description": "Get a first look at the intense, action-packed gameplay of *Orbital Deployment*! Watch the trailer below to see the skill tree system, epic weapon upgrades, and relentless waves of enemies in action. Dive into the survival challenge and discover the strategies you'll need to survive."
+  },
+  "video": {
+    "title": "Reveal trailer",
+    "embed_ID": "OJgwkwWK7mA"
+  }
+}
