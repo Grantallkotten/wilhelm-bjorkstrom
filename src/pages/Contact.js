@@ -27,7 +27,7 @@ function Contact() {
       <section className="contact-content-wrapper">
         <section className="contact-content">
           <div className="contact-information">
-            <h1>Contact me</h1>
+            <h1>📬 Contact me</h1>
             <p>
               Feel free to drop me a line anytime! Your messages are important,
               and I'm genuinely excited to receive them. Whether it's a

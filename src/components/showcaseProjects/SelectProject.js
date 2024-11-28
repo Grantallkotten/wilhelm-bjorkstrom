@@ -72,13 +72,15 @@ function SelectProject() {
           </div>
         </section>
         <div className="my-projects-wrapper">
-          <h1>My Projects</h1>
-          Welcome to my digital portfolio, where innovation meets lines of code!
-          Explore a collection of my diverse coding projects that reflect my
-          passion for problem-solving and creativity. Whether you're interested
-          in web development or intrigued by the intricacies of machine
-          learning, you'll encounter a multitude of projects, each offering
-          unique insights and solutions.
+          <h1>🚀 My Projects</h1>
+          <p>
+            Welcome to my digital portfolio, where innovation meets lines of
+            code! Explore a collection of my diverse coding projects that
+            reflect my passion for problem-solving and creativity. Whether
+            you're interested in web development or intrigued by the intricacies
+            of machine learning, you'll encounter a multitude of projects, each
+            offering unique insights and solutions.
+          </p>
           <TextButton
             text={"Click on a project down below"}
             className={"down-arrow-infinite-icon"}

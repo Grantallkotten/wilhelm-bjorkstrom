@@ -46,7 +46,7 @@ function Home() {
       </section>
       <div className="about-me-home-wrapper">
         <div className="about-me-home-left">
-          <h1>Who am I?</h1>
+          <h1>✨ Who am I?</h1>
           <div className="about-me-home-left-text">
             I am a dedicated software developer with a passion for solving
             complex problems through code. Proficient in languages like C++,

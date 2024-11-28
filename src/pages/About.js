@@ -29,7 +29,7 @@ function About() {
           </div>
           <div className="about-main-content-wrapper">
             <div className="about-main-content">
-              <h1>Who am I?</h1>
+              <h1>✨ Who am I?</h1>
               <div className="about-main-content-text">
                 <div>
                   Working with and developing code has always been a subject
@@ -76,7 +76,7 @@ function About() {
 
           <div className="wave-container-wrapper">
             <div className="left">
-              <h1>To put it simply</h1>
+              <h1>🙌 To put it simply</h1>
               <div className="about-me-home-left-text">
                 Over the years, I've grown to love working with interfaces,
                 where code becomes something beautiful and accessible. Web
