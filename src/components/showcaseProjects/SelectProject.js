@@ -6,6 +6,8 @@ import { setupSlideInAllWhenvisible } from "../../assets/util/setupSlideInAllWhe
 import WaveContainerTop from "../WaveContainerTop.js";
 import TextButton from "../TextButton.js";
 
+import AnimatedText from "../animations/AnimatedText.js";
+
 import "../../styles/buttons.css";
 
 function SelectProject() {
@@ -72,7 +74,20 @@ function SelectProject() {
           </div>
         </section>
         <div className="my-projects-wrapper">
-          <h1>🚀 My Projects</h1>
+          <AnimatedText
+            once
+            text="🚀 My Projects"
+            el="h1"
+            animation={{
+              hidden: { opacity: 0, y: 20 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.5, staggerChildren: 0.05 },
+              },
+            }}
+          />
+
           <p>
             Welcome to my digital portfolio, where innovation meets lines of
             code! Explore a collection of my diverse coding projects that

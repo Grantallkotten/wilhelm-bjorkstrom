@@ -6,6 +6,8 @@ import MailLink from "../assets/icons/MailLink";
 import WaveContainerBottom from "../components/WaveContainerBottom";
 import { setupTypeInAllWhenvisible } from "../assets/util/setupTypeInAllWhenvisible";
 
+import AnimatedText from "../components/animations/AnimatedText";
+
 import "../styles/contact.css";
 
 function Contact() {
@@ -27,7 +29,19 @@ function Contact() {
       <section className="contact-content-wrapper">
         <section className="contact-content">
           <div className="contact-information">
-            <h1>📬 Contact me</h1>
+            <AnimatedText
+              once
+              text="📬 Contact me"
+              el="h1"
+              animation={{
+                hidden: { opacity: 0, y: 20 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.5, staggerChildren: 0.05 },
+                },
+              }}
+            />
             <p>
               Feel free to drop me a line anytime! Your messages are important,
               and I'm genuinely excited to receive them. Whether it's a

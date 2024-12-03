@@ -16,6 +16,8 @@ import BackgroundParticles from "../components/BackgroundParticles.js";
 
 import VideoContainer from "../components/VideoCard";
 
+import AnimatedText from "../components/animations/AnimatedText.js";
+
 import "../styles/projects.css";
 
 const NoData = () => {
@@ -81,7 +83,20 @@ const Project = ({ fileData }) => {
       <section className="project-content-wrapper">
         <section className="project-content">
           <div className="project-header-wrapper">
-            <h1 className="project-header">{fileData.header}</h1>
+            <AnimatedText
+              once
+              text={fileData.header}
+              el="h1"
+              animation={{
+                hidden: { opacity: 0, y: 20 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.5, staggerChildren: 0.05 },
+                },
+              }}
+              className="project-header"
+            />
           </div>
           <div className="info-grid">
             <div>

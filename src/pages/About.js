@@ -4,6 +4,8 @@ import AboutMeWaveContainer from "../components/AboutMeWaveContainer";
 import { setupDrawAllWhenvisible } from "../assets/util/setupDrawAllWhenvisible";
 import WaveContainerTop from "../components/WaveContainerTop";
 
+import AnimatedText from "../components/animations/AnimatedText";
+
 import "../styles/about.css";
 
 function About() {
@@ -29,7 +31,19 @@ function About() {
           </div>
           <div className="about-main-content-wrapper">
             <div className="about-main-content">
-              <h1>✨ Who am I?</h1>
+              <AnimatedText
+                once
+                text="✨ Who am I?"
+                el="h1"
+                animation={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.5, staggerChildren: 0.05 },
+                  },
+                }}
+              />
               <div className="about-main-content-text">
                 <div>
                   Working with and developing code has always been a subject
@@ -76,7 +90,19 @@ function About() {
 
           <div className="wave-container-wrapper">
             <div className="left">
-              <h1>🙌 To put it simply</h1>
+              <AnimatedText
+                once
+                text="🙌 To put it simply"
+                el="h1"
+                animation={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.5, staggerChildren: 0.05 },
+                  },
+                }}
+              />
               <div className="about-me-home-left-text">
                 Over the years, I've grown to love working with interfaces,
                 where code becomes something beautiful and accessible. Web

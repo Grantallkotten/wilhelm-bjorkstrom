@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-
+import AnimatedText from "../components/animations/AnimatedText";
 import BigLogo from "../components/BigLogo";
 import LogoName from "../components/LogoName";
 import HomeSocials from "../components/HomeSocials";
@@ -46,7 +46,19 @@ function Home() {
       </section>
       <div className="about-me-home-wrapper">
         <div className="about-me-home-left">
-          <h1>✨ Who am I?</h1>
+          <AnimatedText
+            once
+            text="✨ Who am I?"
+            el="h1"
+            animation={{
+              hidden: { opacity: 0, y: 20 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.5, staggerChildren: 0.05 },
+              },
+            }}
+          />
           <div className="about-me-home-left-text">
             I am a dedicated software developer with a passion for solving
             complex problems through code. Proficient in languages like C++,
