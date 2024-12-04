@@ -6,6 +6,7 @@ import WaveContainerTop from "../WaveContainerTop.js";
 import TextButton from "../TextButton.js";
 
 import AnimatedText from "../animations/AnimatedText.js";
+import AnimatedComponent from "../animations/AnimatedComponent.js";
 
 import "../../styles/buttons.css";
 
@@ -63,31 +64,17 @@ function SelectProject() {
         </section>
         <div className="my-projects-wrapper">
           <AnimatedText once text="🚀 My Projects" el="h1" />
-          <AnimatedText
-            once
-            text={
-              "Welcome to my digital portfolio, where innovation meets lines of code! Explore a collection of my diverse coding projects that reflect my passion for problem-solving and creativity. Whether you're interested in web development or intrigued by the intricacies of machine learning, you'll encounter a multitude of projects, each offering unique insights and solutions."
-            }
-            el="p"
-            animation={{
-              hidden: { opacity: 0, y: 20 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: { duration: 1.0, staggerChildren: 0.5 },
-              },
-            }}
-            splitByWord={false}
-          />
+          <AnimatedComponent>
+            <p>
+              Welcome to my digital portfolio, where innovation meets lines of
+              code! Explore a collection of my diverse coding projects that
+              reflect my passion for problem-solving and creativity. Whether
+              you're interested in web development or intrigued by the
+              intricacies of machine learning, you'll encounter a multitude of
+              projects, each offering unique insights and solutions."
+            </p>
+          </AnimatedComponent>
 
-          {/* <p>
-            Welcome to my digital portfolio, where innovation meets lines of
-            code! Explore a collection of my diverse coding projects that
-            reflect my passion for problem-solving and creativity. Whether
-            you're interested in web development or intrigued by the intricacies
-            of machine learning, you'll encounter a multitude of projects, each
-            offering unique insights and solutions.
-          </p> */}
           <TextButton
             text={"Click on a project down below"}
             className={"down-arrow-infinite-icon"}
@@ -99,7 +86,24 @@ function SelectProject() {
       <section className="select-project-container">
         <div className="select-project-container-row">
           {fileData.map((projectData, index) => (
-            <ProjectCard projectData={projectData} key={index} />
+            <AnimatedComponent
+              animation={{
+                hidden: { opacity: 0, y: 0 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 1.0,
+                    staggerChildren: 0.5,
+                    ease: "easeInOut",
+                    delay: index * 0.1,
+                  },
+                },
+              }}
+              isVisibleOnEnter={false}
+            >
+              <ProjectCard projectData={projectData} />
+            </AnimatedComponent>
           ))}
         </div>
       </section>

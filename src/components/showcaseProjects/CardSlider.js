@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import AnimatedComponent from "../animations/AnimatedComponent";
+
 import "../../styles/card-slider.css";
 
 // Component to represent each card
@@ -8,7 +10,18 @@ const Card = ({ project }) => {
   return (
     <Link to={`/projects/${project.filename}`} className="card">
       <header className="card-header">
-        <p>{project.date}</p>
+        <AnimatedComponent
+          animation={{
+            hidden: { opacity: 0, y: 20 },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.5, staggerChildren: 0.05 },
+            },
+          }}
+        >
+          <p>{project.date}</p>
+        </AnimatedComponent>
         <h2>{project.header}</h2>
         <p className="description">{project.description_short}</p>
       </header>

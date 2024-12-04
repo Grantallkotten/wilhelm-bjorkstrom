@@ -14,6 +14,7 @@ import BackgroundParticles from "../components/BackgroundParticles.js";
 import VideoContainer from "../components/VideoCard";
 
 import AnimatedText from "../components/animations/AnimatedText.js";
+import AnimatedComponent from "../components/animations/AnimatedComponent.js";
 
 import "../styles/projects.css";
 
@@ -75,13 +76,31 @@ const Project = ({ fileData }) => {
           <div className="info-grid">
             <div>
               <h3 className="header">Date</h3>
-              <div className="date"> {fileData.date}</div>
+              <div className="date">
+                <AnimatedComponent>{fileData.date}</AnimatedComponent>
+              </div>
             </div>
             <div>
               <h3 className="header">Number of developers</h3>
               <div className="developers">
                 {Array.from({ length: numberOfDevelopers }, (_, index) => (
-                  <DeveloperIcon key={index} />
+                  <AnimatedComponent
+                    animation={{
+                      hidden: { opacity: 0, y: 20 },
+                      visible: {
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                          duration: 1.0,
+                          staggerChildren: 0.5,
+                          ease: "easeInOut",
+                          delay: index * 0.1,
+                        },
+                      },
+                    }}
+                  >
+                    <DeveloperIcon key={index} />
+                  </AnimatedComponent>
                 ))}
               </div>
             </div>
@@ -89,7 +108,23 @@ const Project = ({ fileData }) => {
               <h3 className="header">Project links</h3>
               <div className="links">
                 {fileData.links.map((linkItem, index) => (
-                  <div key={index}>{ProjectLinkIcon(linkItem)}</div>
+                  <AnimatedComponent
+                    animation={{
+                      hidden: { opacity: 0, y: 20 },
+                      visible: {
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                          duration: 1.0,
+                          staggerChildren: 0.5,
+                          ease: "easeInOut",
+                          delay: index * 0.1,
+                        },
+                      },
+                    }}
+                  >
+                    <div key={index}>{ProjectLinkIcon(linkItem)}</div>
+                  </AnimatedComponent>
                 ))}
                 {fileData.links.length === 0 ? "-" : null}
               </div>
@@ -98,19 +133,27 @@ const Project = ({ fileData }) => {
               <h3 className="header">Keywords</h3>
               <div className="keywords">
                 {fileData.keywords.map((keyword, index) => (
-                  <div key={index} className="keyword-item">
-                    {keyword}
-                  </div>
+                  <AnimatedComponent isVisibleOnEnter={false}>
+                    <div key={index} className="keyword-item">
+                      {keyword}
+                    </div>
+                  </AnimatedComponent>
                 ))}
               </div>
             </div>
           </div>
           <div className="project-information-content">
-            <div className="row">{fileData.description}</div>
+            <div className="row">
+              <AnimatedComponent>{fileData.description} </AnimatedComponent>
+            </div>
             <div className="grid-row">
               <div className="left">
-                <h2>{fileData.main_image.header}</h2>
-                {fileData.main_image.description}
+                <AnimatedComponent>
+                  <h2>{fileData.main_image.header}</h2>
+                </AnimatedComponent>{" "}
+                <AnimatedComponent>
+                  {fileData.main_image.description}
+                </AnimatedComponent>
               </div>
               <div className="right">
                 <img src={fileData.main_image.link} alt="Main thing" />
@@ -124,15 +167,33 @@ const Project = ({ fileData }) => {
             </div>
             <div className="row">
               <div className="quote-wrapper">
-                <span className="quote">{fileData.quote}</span>
+                <AnimatedText
+                  once
+                  text={fileData.quote}
+                  el="span"
+                  animation={{
+                    hidden: { opacity: 0, y: 0 },
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                      transition: { duration: 0.1, staggerChildren: 0.05 },
+                    },
+                  }}
+                  className={"quote"}
+                />
               </div>
             </div>
           </div>
 
           <div className="image-grid-wrapper">
             <div className="image-grid-content">
-              <h2>{fileData.result.header}</h2>
-              {fileData.result.description}
+              <AnimatedComponent>
+                <h2>{fileData.result.header}</h2>
+              </AnimatedComponent>
+              <AnimatedComponent>
+                {fileData.result.description}
+              </AnimatedComponent>
+
               {fileData.video.embed_ID ? (
                 <div className="video-wrapper">
                   <VideoContainer embedID={fileData.video.embed_ID} />
@@ -140,7 +201,9 @@ const Project = ({ fileData }) => {
               ) : null}
               <div className="image-grid">
                 {fileData.images.map((image, index) => (
-                  <img key={index} src={image.link} alt={image.description} />
+                  <AnimatedComponent>
+                    <img key={index} src={image.link} alt={image.description} />
+                  </AnimatedComponent>
                 ))}
               </div>
             </div>

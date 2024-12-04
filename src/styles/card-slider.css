@@ -1,5 +1,5 @@
 :root {
-  --hover-translate: 260px;
+  --hover-translate: 80px;
 }
 
 .slider-wrapper {
@@ -47,7 +47,7 @@
 }
 /* : means the oposit */
 .card:not(:first-child) {
-  margin-left: calc(0px - var(--hover-translate));
+  margin-left: calc(2px - var(--hover-translate));
 }
 
 .card-header {

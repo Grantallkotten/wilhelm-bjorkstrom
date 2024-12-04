@@ -7,6 +7,7 @@ import WaveContainerBottom from "../components/WaveContainerBottom";
 import { setupTypeInAllWhenvisible } from "../assets/util/setupTypeInAllWhenvisible";
 
 import AnimatedText from "../components/animations/AnimatedText";
+import AnimatedComponent from "../components/animations/AnimatedComponent";
 
 import "../styles/contact.css";
 
@@ -42,13 +43,15 @@ function Contact() {
                 },
               }}
             />
-            <p>
-              Feel free to drop me a line anytime! Your messages are important,
-              and I'm genuinely excited to receive them. Whether it's a
-              collaboration proposal, work proposal a question, or just a
-              friendly hello, your input is appreciated. Follow a link of your
-              choice down below to get in touch with me.
-            </p>
+            <AnimatedComponent>
+              <p>
+                Feel free to drop me a line anytime! Your messages are
+                important, and I'm genuinely excited to receive them. Whether
+                it's a collaboration proposal, work proposal a question, or just
+                a friendly hello, your input is appreciated. Follow a link of
+                your choice down below to get in touch with me.
+              </p>
+            </AnimatedComponent>
             <div className="button-container">
               <TextButton
                 text={"Click on a link down below"}
