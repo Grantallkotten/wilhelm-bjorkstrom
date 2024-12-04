@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import SelectProject from "../components/showcaseProjects/SelectProject";
@@ -7,9 +7,6 @@ import { fetchProjectData } from "../assets/util/fetchProjectData.js";
 import DeveloperIcon from "../assets/icons/DeveloperIcon.js";
 import GithubLink from "../assets/icons/GithubLink.js";
 import ExternalLink from "../assets/icons/ExternalLink.js";
-
-import { setupDrawAllWhenvisible } from "../assets/util/setupDrawAllWhenvisible.js";
-import { setupSlideInAllWhenvisible } from "../assets/util/setupSlideInAllWhenvisible.js";
 
 import WaveContainerBottom from "../components/WaveContainerBottom.js";
 import BackgroundParticles from "../components/BackgroundParticles.js";
@@ -47,32 +44,9 @@ const ProjectLinkIcon = (linkItem) => {
 };
 
 const Project = ({ fileData }) => {
-  const drawRef = useRef(null);
-  const slidRef = useRef(null);
-
   const numberOfDevelopers = Number.isInteger(fileData.developers)
     ? fileData.developers
     : 1;
-
-  useEffect(() => {
-    const cleanup = setupDrawAllWhenvisible(drawRef, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.05,
-    });
-
-    return cleanup;
-  }, []);
-
-  useEffect(() => {
-    const cleanup = setupSlideInAllWhenvisible(slidRef, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.05,
-    });
-
-    return cleanup;
-  }, []);
 
   return (
     <section className="project-wrapper">
@@ -149,10 +123,8 @@ const Project = ({ fileData }) => {
               </div>
             </div>
             <div className="row">
-              <div className="quote-wrapper" ref={drawRef}>
-                <span className="quote drawAllWhenvisible">
-                  {fileData.quote}
-                </span>
+              <div className="quote-wrapper">
+                <span className="quote">{fileData.quote}</span>
               </div>
             </div>
           </div>
@@ -166,14 +138,9 @@ const Project = ({ fileData }) => {
                   <VideoContainer embedID={fileData.video.embed_ID} />
                 </div>
               ) : null}
-              <div className="image-grid" ref={slidRef}>
+              <div className="image-grid">
                 {fileData.images.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image.link}
-                    alt={image.description}
-                    className="slideInAllWhenvisible"
-                  />
+                  <img key={index} src={image.link} alt={image.description} />
                 ))}
               </div>
             </div>

@@ -441,7 +441,7 @@
   transition: transform var(--transition-speed-slow) ease-in-out,
     box-shadow var(--transition-speed-slow) ease-in-out;
 
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .image-grid-wrapper .image-grid img:hover {

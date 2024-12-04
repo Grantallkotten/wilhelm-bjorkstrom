@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
 import AboutMeWaveContainer from "../components/AboutMeWaveContainer";
-import { setupDrawAllWhenvisible } from "../assets/util/setupDrawAllWhenvisible";
 import WaveContainerTop from "../components/WaveContainerTop";
 
 import AnimatedText from "../components/animations/AnimatedText";
@@ -9,18 +8,6 @@ import AnimatedText from "../components/animations/AnimatedText";
 import "../styles/about.css";
 
 function About() {
-  const drawRef = useRef(null);
-
-  useEffect(() => {
-    const cleanup = setupDrawAllWhenvisible(drawRef, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.05,
-    });
-
-    return cleanup;
-  }, []);
-
   return (
     <section className="about-wrapper">
       <section className="about-banner" />
@@ -114,7 +101,7 @@ function About() {
                 create seamless user experiences. The future is full of exciting
                 possibilities, and perhaps our paths will cross soon!
               </div>
-              <div className="quote-wrapper" ref={drawRef}>
+              <div className="quote-wrapper">
                 <div className="quote drawAllWhenvisible">
                   Thank you for taking the time to learn about me!
                   <span style={{ opacity: "0" }}>.</span>

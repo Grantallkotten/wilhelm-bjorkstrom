@@ -15,6 +15,7 @@ const defaultAnimations = {
     },
   },
 };
+
 // Credit: This staggered text animation is inspired by the amazing guide at
 // https://www.frontend.fyi/v/staggered-text-animations-with-framer-motion.
 // Thanks to the author for the great explanation and animations 🔥
@@ -25,6 +26,7 @@ const AnimatedText = ({
   once = false,
   repeatDelay,
   animation = defaultAnimations,
+  splitByWord = true,
 }) => {
   const controls = useAnimation();
   const ref = useRef(null);
@@ -52,6 +54,12 @@ const AnimatedText = ({
     return () => clearTimeout(timeout);
   }, [isInView, controls, repeatDelay]);
 
+  // Helper function to determine if a character is likely an emoji
+  const isEmoji = (char) => {
+    const isNormalChar = /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+$/u.test(char);
+    return !isNormalChar;
+  };
+
   return (
     <Wrapper className={className}>
       {/* Screen reader fallback */}
@@ -62,6 +70,7 @@ const AnimatedText = ({
         ref={ref}
         initial="hidden"
         animate={controls}
+        style={{ display: "inline-block" }} // Ensures stagger animation applies to children
         variants={{
           visible: { transition: { staggerChildren: 0.1 } },
           hidden: {},
@@ -72,15 +81,38 @@ const AnimatedText = ({
           <span className="block" key={`line-${lineIndex}`}>
             {line.split(" ").map((word, wordIndex) => (
               <span className="inline-block" key={`word-${wordIndex}`}>
-                {word.split("").map((char, charIndex) => (
+                {splitByWord ? (
+                  word.split("").map((char, charIndex) => {
+                    const isEmojiChar = isEmoji(char); // Check if the char is an emoji
+
+                    return (
+                      <motion.span
+                        key={`char-${charIndex}`}
+                        className={isEmojiChar ? "emoji-block" : "inline-block"}
+                        variants={animation}
+                        style={{
+                          display: isEmojiChar ? "" : "inline-block", // Block for emojis, inline-block for others
+                          overflowWrap: "break-word",
+                        }}
+                      >
+                        {char}
+                      </motion.span>
+                    );
+                  })
+                ) : (
                   <motion.span
-                    key={`char-${charIndex}`}
+                    key={`word-${wordIndex}`}
                     className="inline-block"
                     variants={animation}
+                    style={{
+                      overflowWrap: "break-word",
+                      display: "inline-block",
+                    }}
                   >
-                    {char}
+                    {word}
                   </motion.span>
-                ))}
+                )}
+
                 {/* Add a space between words */}
                 <span className="inline-block">&nbsp;</span>
               </span>

@@ -1,16 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { setupSlideInAllWhenvisible } from "../../assets/util/setupSlideInAllWhenvisible";
 
 import "../../styles/card-slider.css";
 
 // Component to represent each card
 const Card = ({ project }) => {
   return (
-    <Link
-      to={`/projects/${project.filename}`}
-      className="card slideInAllWhenvisible"
-    >
+    <Link to={`/projects/${project.filename}`} className="card">
       <header className="card-header">
         <p>{project.date}</p>
         <h2>{project.header}</h2>
@@ -25,7 +21,6 @@ const Card = ({ project }) => {
 
 function CardSlider() {
   const [projects, setProjects] = useState([]);
-  const sliderRef = useRef(null);
 
   useEffect(() => {
     // Retrive JSON data from the public directory
@@ -55,19 +50,9 @@ function CardSlider() {
     fetchProjects();
   }, []);
 
-  useEffect(() => {
-    const cleanup = setupSlideInAllWhenvisible(sliderRef, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.05,
-    });
-
-    return cleanup;
-  }, [projects]);
-
   return (
     <section className="slider-wrapper">
-      <div className="slider" ref={sliderRef}>
+      <div className="slider">
         {projects.map((project, index) => (
           <Card key={index} project={project} />
         ))}

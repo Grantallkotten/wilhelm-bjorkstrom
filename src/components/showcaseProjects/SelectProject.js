@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { fetchAllProjectData } from "../../assets/util/fetchAllProjectData.js";
-import { setupSlideInAllWhenvisible } from "../../assets/util/setupSlideInAllWhenvisible.js";
 import WaveContainerTop from "../WaveContainerTop.js";
 import TextButton from "../TextButton.js";
 
@@ -12,7 +11,6 @@ import "../../styles/buttons.css";
 
 function SelectProject() {
   const [fileData, setFileData] = useState([]);
-  const slideinRef = useRef(null);
 
   const topSVGPaths = [
     "M130.02,167.80 C237.81,54.62 317.94,-33.95 500.00,49.85 L500.00,149.60 L200.56,172.73 Z",
@@ -24,16 +22,6 @@ function SelectProject() {
     fetchAllProjectData(setFileData);
   }, []);
 
-  useEffect(() => {
-    const cleanup = setupSlideInAllWhenvisible(slideinRef, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.05,
-    });
-
-    return cleanup;
-  }, [fileData]);
-
   const ProjectCard = ({ projectData }) => {
     const randomPath =
       topSVGPaths[Math.floor(Math.random() * topSVGPaths.length)];
@@ -41,7 +29,7 @@ function SelectProject() {
     return (
       <Link
         to={`/projects/${projectData.filename}`}
-        className="select-project-card slideInAllWhenvisible"
+        className="select-project-card"
       >
         <img src={projectData.main_image.link} alt="Project" />
         <div className="select-project-card-content">
@@ -74,28 +62,32 @@ function SelectProject() {
           </div>
         </section>
         <div className="my-projects-wrapper">
+          <AnimatedText once text="🚀 My Projects" el="h1" />
           <AnimatedText
             once
-            text="🚀 My Projects"
-            el="h1"
+            text={
+              "Welcome to my digital portfolio, where innovation meets lines of code! Explore a collection of my diverse coding projects that reflect my passion for problem-solving and creativity. Whether you're interested in web development or intrigued by the intricacies of machine learning, you'll encounter a multitude of projects, each offering unique insights and solutions."
+            }
+            el="p"
             animation={{
               hidden: { opacity: 0, y: 20 },
               visible: {
                 opacity: 1,
                 y: 0,
-                transition: { duration: 0.5, staggerChildren: 0.05 },
+                transition: { duration: 1.0, staggerChildren: 0.5 },
               },
             }}
+            splitByWord={false}
           />
 
-          <p>
+          {/* <p>
             Welcome to my digital portfolio, where innovation meets lines of
             code! Explore a collection of my diverse coding projects that
             reflect my passion for problem-solving and creativity. Whether
             you're interested in web development or intrigued by the intricacies
             of machine learning, you'll encounter a multitude of projects, each
             offering unique insights and solutions.
-          </p>
+          </p> */}
           <TextButton
             text={"Click on a project down below"}
             className={"down-arrow-infinite-icon"}
@@ -104,7 +96,7 @@ function SelectProject() {
           />
         </div>
       </section>
-      <section ref={slideinRef} className="select-project-container">
+      <section className="select-project-container">
         <div className="select-project-container-row">
           {fileData.map((projectData, index) => (
             <ProjectCard projectData={projectData} key={index} />
