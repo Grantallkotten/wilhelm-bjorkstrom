@@ -145,6 +145,10 @@
     flex-direction: column;
   }
 
+  .contact-information {
+    padding-bottom: 0;
+  }
+
   .contact-grid {
     width: 100%;
     display: flex;
@@ -152,10 +156,13 @@
     justify-content: center;
     align-items: center;
     gap: calc(2 * var(--margin-big));
+    background-color: var(--background-color-primary);
+    border-radius: var(--border-radius-medium);
   }
 
   .contact-griditem-social-icon {
-    scale: 1.5;
+    scale: 1.2;
+    padding: var(--padding-medium);
   }
 
   .contact-griditem-social-text {
@@ -168,6 +175,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
+    margin: 0;
   }
 
   .contact-img {

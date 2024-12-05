@@ -160,9 +160,12 @@ h2 {
   }
 
   h1 {
-    font-size: 1.5rem;
     overflow-wrap: break-word;
     padding: 5px;
+  }
+
+  h1 span {
+    font-size: 1.5rem;
   }
 
   .style-text {
