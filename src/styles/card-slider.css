@@ -61,8 +61,7 @@
   width: 100%;
   height: 50%;
   border-radius: var(--border-radius-small);
-  max-width: 100%;
-  max-height: 100%;
+
   overflow: hidden;
 }
 
@@ -106,14 +105,15 @@
     display: flex;
     flex-direction: column;
     height: 80vw;
-    width: 80vw;
-    min-width: 240px;
+    width: 90vw;
+    min-width: 75vw;
     min-height: 500px;
   }
 
   .card-header {
     height: fit-content;
     margin-bottom: var(--margin-big);
+    height: 50%;
   }
 
   .card-header .description {
@@ -122,22 +122,23 @@
 
   .card-header h2 {
     width: 100%;
-    text-align: center;
+    text-align: left;
     order: 1;
+    height: fit-content;
+    margin: var(--margin-medium);
   }
 
   /* : means the oposit */
   .card:not(:first-child) {
-    margin-left: calc(-22px);
+    margin-left: 2px;
   }
 
   /* All siblings after the hoverd card */
   .card:hover ~ .card {
-    transform: translateX(-0.4 * var(--hover-translate));
     transition: var(--transition-speed);
   }
 
-  h2 {
+  h2 span {
     font-size: 12px;
   }
 
