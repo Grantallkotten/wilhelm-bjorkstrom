@@ -87,6 +87,7 @@ function SelectProject() {
         <div className="select-project-container-row">
           {fileData.map((projectData, index) => (
             <AnimatedComponent
+              key={index}
               animation={{
                 hidden: { opacity: 0, y: 0 },
                 visible: {

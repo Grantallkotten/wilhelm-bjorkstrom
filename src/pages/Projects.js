@@ -85,6 +85,7 @@ const Project = ({ fileData }) => {
               <div className="developers">
                 {Array.from({ length: numberOfDevelopers }, (_, index) => (
                   <AnimatedComponent
+                    key={"developers-" + index}
                     animation={{
                       hidden: { opacity: 0, y: 20 },
                       visible: {
@@ -109,6 +110,7 @@ const Project = ({ fileData }) => {
               <div className="links">
                 {fileData.links.map((linkItem, index) => (
                   <AnimatedComponent
+                    key={"links-" + index}
                     animation={{
                       hidden: { opacity: 0, y: 20 },
                       visible: {
@@ -123,7 +125,7 @@ const Project = ({ fileData }) => {
                       },
                     }}
                   >
-                    <div key={index}>{ProjectLinkIcon(linkItem)}</div>
+                    <div>{ProjectLinkIcon(linkItem)}</div>
                   </AnimatedComponent>
                 ))}
                 {fileData.links.length === 0 ? "-" : null}
@@ -133,10 +135,11 @@ const Project = ({ fileData }) => {
               <h3 className="header">Keywords</h3>
               <div className="keywords">
                 {fileData.keywords.map((keyword, index) => (
-                  <AnimatedComponent isVisibleOnEnter={false}>
-                    <div key={index} className="keyword-item">
-                      {keyword}
-                    </div>
+                  <AnimatedComponent
+                    isVisibleOnEnter={false}
+                    key={"keyword-" + index}
+                  >
+                    <div className="keyword-item">{keyword}</div>
                   </AnimatedComponent>
                 ))}
               </div>
@@ -194,15 +197,15 @@ const Project = ({ fileData }) => {
                 {fileData.result.description}
               </AnimatedComponent>
 
-              {fileData.video.embed_ID ? (
+              {fileData.video.embed_ID && (
                 <div className="video-wrapper">
                   <VideoContainer embedID={fileData.video.embed_ID} />
                 </div>
-              ) : null}
+              )}
               <div className="image-grid">
                 {fileData.images.map((image, index) => (
-                  <AnimatedComponent>
-                    <img key={index} src={image.link} alt={image.description} />
+                  <AnimatedComponent key={"image-grid-item-" + index}>
+                    <img src={image.link} alt={image.description} />
                   </AnimatedComponent>
                 ))}
               </div>

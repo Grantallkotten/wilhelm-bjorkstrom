@@ -164,6 +164,7 @@
 
   .contact-img-container {
     width: 100%;
+    min-height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
