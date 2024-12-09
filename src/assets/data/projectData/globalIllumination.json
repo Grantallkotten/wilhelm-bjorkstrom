@@ -12,7 +12,7 @@
     },
     {
       "type": "GitHub",
-      "link": "https://github.com/Grantallkotten/Global-Illumination-using-Ray-Tracing/tree/monte-carlo-ray-tracing-(only)"
+      "link": "https://github.com/Grantallkotten/RayTracer/tree/photon-mapping"
     }
   ],
   "keywords": ["Ray tracing", "Photon mapping", "C++", "Monte Carlo"],
@@ -33,6 +33,26 @@
     },
     {
       "link": "/images/projectImages/globalIllumination/global_illumination_path_tracing.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/globalIllumination/terrain.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/globalIllumination/valley.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/globalIllumination/cave.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/globalIllumination/flowers.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/globalIllumination/landscape.jpg",
       "header": ""
     }
   ],
