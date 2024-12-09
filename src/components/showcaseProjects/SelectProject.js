@@ -19,6 +19,11 @@ function SelectProject() {
     "M-5.41,195.37 C150.00,149.60 353.50,-48.71 500.00,49.85 L500.00,149.60 L0.23,218.98 Z ",
   ];
 
+  const imageNames = ["work", "cold", "silhouette", "rocks"];
+  const [randomImageName] = useState(
+    imageNames[Math.floor(Math.random() * imageNames.length)]
+  );
+
   useEffect(() => {
     fetchAllProjectData(setFileData);
   }, []);
@@ -52,7 +57,6 @@ function SelectProject() {
 
   return (
     <section className="project-wrapper">
-      <section className="select-project-banner" />
       <section className="select-project-wrapper">
         <section className="top-wave-wrapper">
           <div className="top-wave-container">

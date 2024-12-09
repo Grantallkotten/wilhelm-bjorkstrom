@@ -34,26 +34,6 @@
     {
       "link": "/images/projectImages/globalIllumination/global_illumination_path_tracing.jpg",
       "header": ""
-    },
-    {
-      "link": "/images/projectImages/globalIllumination/terrain.jpg",
-      "header": ""
-    },
-    {
-      "link": "/images/projectImages/globalIllumination/valley.jpg",
-      "header": ""
-    },
-    {
-      "link": "/images/projectImages/globalIllumination/cave.jpg",
-      "header": ""
-    },
-    {
-      "link": "/images/projectImages/globalIllumination/flowers.jpg",
-      "header": ""
-    },
-    {
-      "link": "/images/projectImages/globalIllumination/landscape.jpg",
-      "header": ""
     }
   ],
   "description": "This project explores Monte Carlo ray tracing in computer graphics for photorealistic rendering, emphasizing global illumination models over older ones like Phong shading. The report discusses the Whitted ray tracing method and introduces Monte Carlo ray tracing for diffuse reflection. An implementation in C++ explores parameters' impact, including rays per pixel, shadow rays, color bleeding, illumination, noise, aliasing, and shadows. The model is enhanced with photon mapping for caustics in translucent spheres, using KD-trees and flux calculations.",
