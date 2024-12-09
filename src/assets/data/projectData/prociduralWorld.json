@@ -36,6 +36,26 @@
     {
       "link": "/images/projectImages/prociduralWorld/procedural_world_sky.jpg",
       "header": ""
+    },
+    {
+      "link": "/images/projectImages/prociduralWorld/terrain.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/prociduralWorld/valley.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/prociduralWorld/cave.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/prociduralWorld/flowers.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/prociduralWorld/landscape.jpg",
+      "header": ""
     }
   ],
   "description": "The project aims to explore how the Blender software, particularly its Geometry Nodes feature, can be utilized to create a procedurally generated digital world that mimics real-world terrain. The primary focus is on simulating natural features such as mountains, valleys, biomes, and vegetation in a visually appealing and seemingly random manner.",
