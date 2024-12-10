@@ -19,11 +19,6 @@ function SelectProject() {
     "M-5.41,195.37 C150.00,149.60 353.50,-48.71 500.00,49.85 L500.00,149.60 L0.23,218.98 Z ",
   ];
 
-  const imageNames = ["work", "cold", "silhouette", "rocks"];
-  const [randomImageName] = useState(
-    imageNames[Math.floor(Math.random() * imageNames.length)]
-  );
-
   useEffect(() => {
     fetchAllProjectData(setFileData);
   }, []);
@@ -75,7 +70,7 @@ function SelectProject() {
               reflect my passion for problem-solving and creativity. Whether
               you're interested in web development or intrigued by the
               intricacies of machine learning, you'll encounter a multitude of
-              projects, each offering unique insights and solutions."
+              projects, each offering unique insights and solutions.
             </p>
           </AnimatedComponent>
 

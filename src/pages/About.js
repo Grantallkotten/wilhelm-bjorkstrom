@@ -67,6 +67,7 @@ function About() {
                       },
                     },
                   }}
+                  className={"about-image-row"}
                 >
                   <p>
                     My will to move from problem to solution has guided me
@@ -82,6 +83,7 @@ function About() {
                     proficient in C++, turning a challenge involving the
                     language into something exciting to tackle.
                   </p>
+                  <div className="about-image-row-image" />
                 </AnimatedComponent>
                 <AnimatedComponent
                   animation={{
