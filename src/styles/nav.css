@@ -47,7 +47,7 @@
   text-decoration: none;
 
   /*For hover effect*/
-  filter: opacity(0.5);
+  filter: opacity(0.8);
   transition: var(--transition-speed);
 }
 
@@ -158,7 +158,6 @@
 
     width: var(--nav-width);
     height: 100vh;
-    border-top-right-radius: var(--border-radius-small);
   }
 
   .navbar:hover {

@@ -73,6 +73,16 @@ h1 {
   position: absolute;
 }
 
+@media (prefers-color-scheme: light) {
+  .home-startpage {
+    background-image: url("../../public/images/clouds.jpg");
+  }
+
+  .home-startpage::before {
+    background-color: rgba(255, 255, 255, 0.343);
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .home-startpage {
     height: calc(100vh - var(--nav-small-height));
