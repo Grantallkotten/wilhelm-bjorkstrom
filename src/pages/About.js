@@ -138,7 +138,7 @@ function About() {
                 <div className="quote">
                   <AnimatedText
                     once
-                    text="Thank you for taking the time to learn about me!"
+                    text="Thanks for getting to know me!"
                     el="h1"
                     animation={{
                       hidden: { opacity: 0, y: 0 },
