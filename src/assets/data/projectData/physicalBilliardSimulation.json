@@ -24,11 +24,15 @@
   ],
   "header": "A physical billiard simulation",
   "main_image": {
-    "link": "/images/projectImages/physicalBilliardSimulation/lets_start.jpg",
+    "link": "/images/projectImages/physicalBilliardSimulation/billiard_game.webp",
     "header": "Implementation",
     "description": "The system is defined using differential equations that describe billiard ball motion, exploring concepts like momentum, kinetic energy, and collisions with walls and other balls. Numerical methods, including Euler approximation, simulate the dynamics while accounting for friction. Initially, the project models physics in MATLAB for simplicity, then transitions to WebGL using the Three.js library. Key elements include the Vector3 class for vector operations, OrbitControls for camera movement, and GLTFLoader for importing 3D models. The WebGL implementation mirrors the MATLAB structure to ensure consistent performance across devices, ultimately aiming to provide a user-friendly, web-based billiard simulation with realistic physics."
   },
   "images": [
+    {
+      "link": "/images/projectImages/physicalBilliardSimulation/lets_start.jpg",
+      "header": ""
+    },
     {
       "link": "/images/projectImages/physicalBilliardSimulation/billiard_simulation.jpg",
       "header": ""

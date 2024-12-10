@@ -2,6 +2,9 @@
   --text-primary: #ffffff;
   --background-color-primary: #22252a;
   --blue-color-primary: #596fbd;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 @media (prefers-color-scheme: light) {
