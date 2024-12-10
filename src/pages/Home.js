@@ -82,7 +82,7 @@ function Home() {
             <TextButton
               text={"More about me"}
               className={"right-arrow-hover-icon"}
-              icon={"🡺"}
+              icon={"🡪"}
               onClick={() => {
                 navigate("/about");
               }}

@@ -25,7 +25,7 @@ export function BackgroundParticles({ children }) {
       style={{
         position: "relative",
         width: "100%",
-        height: "100%",
+        height: "calc(100% - 100px)",
       }}
     >
       {init ? <Particles options={particleData()} /> : null}
