@@ -34,16 +34,16 @@ function Home() {
           <BigLogo />
           <LogoName />
           <HomeSocials />
+          <div className="home-scroll-button-wrapper">
+            <TransparentButton
+              text={"My projects"}
+              className={"down-arrow-infinite-icon"}
+              onClick={scrollToRefFunction}
+              style={{ position: "absolute", bottom: "4%" }}
+              icon={"🡫"}
+            />
+          </div>
         </BackgroundParticles>
-        <div className="home-scroll-button-wrapper">
-          <TransparentButton
-            text={"My projects"}
-            className={"down-arrow-infinite-icon"}
-            onClick={scrollToRefFunction}
-            style={{ position: "absolute", bottom: "4%" }}
-            icon={"🡫"}
-          />
-        </div>
       </section>
       <div className="about-me-home-wrapper">
         <div className="about-me-home-left">
