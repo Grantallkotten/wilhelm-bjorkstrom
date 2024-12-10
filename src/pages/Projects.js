@@ -27,7 +27,7 @@ const NoData = () => {
             Sorry, I have no data for this project
           </div>
         </BackgroundParticles>
-        <WaveContainerBottom></WaveContainerBottom>
+        <WaveContainerBottom />
       </section>
     </section>
   );
@@ -147,15 +147,17 @@ const Project = ({ fileData }) => {
           </div>
           <div className="project-information-content">
             <div className="row">
-              <AnimatedComponent>{fileData.description} </AnimatedComponent>
+              <AnimatedComponent>
+                <p>{fileData.description}</p>
+              </AnimatedComponent>
             </div>
             <div className="grid-row">
               <div className="left">
                 <AnimatedComponent>
                   <h2>{fileData.main_image.header}</h2>
-                </AnimatedComponent>{" "}
+                </AnimatedComponent>
                 <AnimatedComponent>
-                  {fileData.main_image.description}
+                  <p>{fileData.main_image.description}</p>
                 </AnimatedComponent>
               </div>
               <div className="right">
@@ -164,7 +166,7 @@ const Project = ({ fileData }) => {
                   <path
                     d="M100.11,-20.17 C-69.19,34.93 78.10,102.85 -21.78,175.68 L500.00,149.60 L500.00,0.00 Z"
                     className="svgStyle"
-                  ></path>
+                  />
                 </svg>
               </div>
             </div>
@@ -194,7 +196,7 @@ const Project = ({ fileData }) => {
                 <h2>{fileData.result.header}</h2>
               </AnimatedComponent>
               <AnimatedComponent>
-                {fileData.result.description}
+                <p>{fileData.result.description}</p>
               </AnimatedComponent>
 
               {fileData.video.embed_ID && (

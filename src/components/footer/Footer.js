@@ -15,7 +15,19 @@ function Footer() {
         <MailLink />
       </div>
       <hr />
-      <p>&copy; 2024 Wilhelm Björkström</p>
+      <div className="footer-text">
+        <p>
+          Designed and created by me. Find the source code on my{" "}
+          <a
+            href="https://github.com/Grantallkotten/hemsida-v2"
+            target="_blank"
+          >
+            GitHub
+          </a>
+          .
+        </p>
+      </div>
+      <p>&copy; 2024 Wilhelm Björksrtöm.</p>
     </section>
   );
 }

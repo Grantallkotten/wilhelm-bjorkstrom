@@ -25,6 +25,14 @@
   height: 30px;
 }
 
+.footer-text {
+  display: flex;
+}
+
+.footer-text a {
+  color: var(--blue-color-primary);
+}
+
 hr {
   width: 90%;
   height: 1px;
