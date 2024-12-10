@@ -19,11 +19,15 @@
   ],
   "header": "Below Zero: A Blender Project",
   "main_image": {
-    "link": "/images/projectImages/aBlenderProject/first-render.jpg",
+    "link": "/images/projectImages/aBlenderProject/belowZero.webp",
     "header": "My first time in Blender",
     "description": "This project was my introduction to 3D modeling, and I had to learn Blender from scratch. My primary focus was the robot itself, but I also did a lot of work with the mountain cliff and its surrounding details. I started with basic shapes, using simple geometry to build a solid, functional design. The body began as a cylinder, with rectangular blocks for the limbs. After the main structure was complete, I refined the model by adding details like lamps and components to give it a more industrial, futuristic feel. The design aimed for simplicity with an advanced edge, resembling a robot from a futuristic military force. Finally, blood spatters were added to the metal textures, suggesting a darker backstory."
   },
   "images": [
+    {
+      "link": "/images/projectImages/aBlenderProject/first-render.jpg",
+      "header": ""
+    },
     {
       "link": "/images/projectImages/aBlenderProject/final-render.jpg",
       "header": ""

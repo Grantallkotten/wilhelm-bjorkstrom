@@ -14,7 +14,7 @@
   "keywords": ["Godot", "AI", "Game", "GDScripts", "Wave based shooter"],
   "header": "Orbital Deployment",
   "main_image": {
-    "link": "/images/projectImages/orbitalDeployment/inGame.jpg",
+    "link": "/images/projectImages/orbitalDeployment/ODRevealTrailer.webp",
     "header": "The gameplay",
     "description": "In Orbital Deployment, players engage enemies from a top-down perspective, moving through each round while fending off waves of opponents. The player can choose to spend in-game credits to purchase a variety of powerful weapons, grenades, and other survival tools between rounds. Each purchase is critical to surviving the increasingly difficult waves with waring AI enemys. Outside of the main gameplay rounds, the game offers a skill tree available in the main menu. Players can unlock and enhance core abilities, creating a unique build each game. Key choices include increasing maximum health, boosting bullet damage, earning more credits per round, and other critical advantages. Each choice made in the skill tree builds on a distinct survival strategy, allowing players to customize their playstyle to best handle the challenges ahead."
   },
@@ -33,6 +33,10 @@
     },
     {
       "link": "/images/projectImages/orbitalDeployment/loading.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/orbitalDeployment/inGame.jpg",
       "header": ""
     },
     {
