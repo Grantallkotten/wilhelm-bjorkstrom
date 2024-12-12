@@ -21,6 +21,7 @@ function Footer() {
           <a
             href="https://github.com/Grantallkotten/hemsida-v2"
             target="_blank"
+            rel="noopener noreferrer"
           >
             GitHub
           </a>

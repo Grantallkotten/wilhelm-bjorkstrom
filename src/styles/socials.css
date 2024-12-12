@@ -16,7 +16,7 @@
   }
 
   .logo-socials-wapper svg {
-    min-width: 16vw;
-    min-height: 22vw;
+    width: 60px;
+    height: 60px;
   }
 }

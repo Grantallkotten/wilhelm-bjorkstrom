@@ -33,6 +33,7 @@
   background-color: var(--background-color-secondary);
   display: flex;
   justify-content: space-between;
+  min-height: fit-content;
 }
 
 h1 {
@@ -43,6 +44,7 @@ h1 {
 .about-me-home-right {
   width: 50%;
   position: relative;
+  min-height: fit-content;
 }
 
 .about-me-home-left {

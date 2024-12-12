@@ -24,6 +24,7 @@
   animation: fadeIn 1s ease-in-out;
 
   font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  padding-top: 4vh;
 }
 
 .big-logo {
