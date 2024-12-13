@@ -1,10 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 
 import TextButton from "../components/TextButton";
 import LinkedinLink from "../assets/icons/LinkedinLink";
 import MailLink from "../assets/icons/MailLink";
 import WaveContainerBottom from "../components/WaveContainerBottom";
-import { setupTypeInAllWhenvisible } from "../assets/util/setupTypeInAllWhenvisible";
 
 import AnimatedText from "../components/animations/AnimatedText";
 import AnimatedComponent from "../components/animations/AnimatedComponent";
@@ -12,17 +11,18 @@ import AnimatedComponent from "../components/animations/AnimatedComponent";
 import "../styles/contact.css";
 
 function Contact() {
-  const typeInRef = useRef(null);
-
-  useEffect(() => {
-    const cleanup = setupTypeInAllWhenvisible(typeInRef, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.05,
-    });
-
-    return cleanup;
-  }, []);
+  const typeInAnimation = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0,
+        staggerChildren: 0.5,
+        ease: "easeInOut",
+        delay: "0.3",
+      },
+    },
+  };
 
   return (
     <section className="contact-wrapper">
@@ -30,19 +30,7 @@ function Contact() {
       <section className="contact-content-wrapper">
         <section className="contact-content">
           <div className="contact-information">
-            <AnimatedText
-              once
-              text="📬 Contact me"
-              el="h1"
-              animation={{
-                hidden: { opacity: 0, y: 20 },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.5, staggerChildren: 0.05 },
-                },
-              }}
-            />
+            <AnimatedText once text="📬 Contact me" el="h1" />
             <AnimatedComponent>
               <p>
                 Feel free to drop me a line anytime! Your messages are
@@ -60,21 +48,27 @@ function Contact() {
                 icon={"🡫"}
               />
             </div>
-            <div className="contact-grid" ref={typeInRef}>
+            <div className="contact-grid">
               <div className="contact-griditem-social-icon">
                 <LinkedinLink />
               </div>
-              <div className="contact-griditem-social-text typeInAllWhenvisible">
+              <div className="contact-griditem-social-text">
                 <a href="https://www.linkedin.com/in/wilhelm-bjorkstrom/">
-                  linkedin.com/in/wilhelm-bjorkstrom
+                  <AnimatedText
+                    text="linkedin.com/in/wilhelm-bjorkstrom"
+                    animation={typeInAnimation}
+                  />
                 </a>
               </div>
               <div className="contact-griditem-social-icon">
                 <MailLink />
               </div>
-              <div className="contact-griditem-social-text typeInAllWhenvisible">
+              <div className="contact-griditem-social-text">
                 <a href="mailto:wilhelm@bjorkstrom.org">
-                  wilhelm@bjorkstrom.org
+                  <AnimatedText
+                    text="wilhelm@bjorkstrom.org"
+                    animation={typeInAnimation}
+                  />
                 </a>
               </div>
             </div>

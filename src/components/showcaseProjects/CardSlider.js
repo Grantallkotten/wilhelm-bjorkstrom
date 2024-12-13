@@ -7,19 +7,19 @@ import "../../styles/card-slider.css";
 
 // Component to represent each card
 const Card = ({ project }) => {
+  const dateAnimation = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, staggerChildren: 0.05 },
+    },
+  };
+
   return (
     <Link to={`/projects/${project.filename}`} className="card">
       <header className="card-header">
-        <AnimatedComponent
-          animation={{
-            hidden: { opacity: 0, y: 20 },
-            visible: {
-              opacity: 1,
-              y: 0,
-              transition: { duration: 0.5, staggerChildren: 0.05 },
-            },
-          }}
-        >
+        <AnimatedComponent animation={dateAnimation}>
           <p>{project.date}</p>
         </AnimatedComponent>
         <h2>{project.header}</h2>

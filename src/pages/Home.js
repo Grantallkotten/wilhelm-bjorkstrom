@@ -47,19 +47,7 @@ function Home() {
       </section>
       <div className="about-me-home-wrapper">
         <div className="about-me-home-left">
-          <AnimatedText
-            once
-            text="✨ Who am I?"
-            el="h1"
-            animation={{
-              hidden: { opacity: 0, y: 20 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.5, staggerChildren: 0.05 },
-              },
-            }}
-          />
+          <AnimatedText once text="✨ Who am I?" el="h1" />
           <div className="about-me-home-left-text">
             <AnimatedComponent>
               <p>

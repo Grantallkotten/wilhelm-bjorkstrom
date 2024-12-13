@@ -7,7 +7,11 @@ const defaultAnimations = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 1.0, staggerChildren: 0.5, ease: "easeInOut" },
+    transition: {
+      duration: 1.0,
+      staggerChildren: 0.5,
+      ease: "easeInOut",
+    },
   },
 };
 

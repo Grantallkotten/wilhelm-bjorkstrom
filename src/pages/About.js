@@ -10,6 +10,15 @@ import AnimatedComponent from "../components/animations/AnimatedComponent";
 import "../styles/about.css";
 
 function About() {
+  const quoteAnimation = {
+    hidden: { opacity: 0, y: 0 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.1, staggerChildren: 0.05 },
+    },
+  };
+
   return (
     <section className="about-wrapper">
       <section className="about-banner" />
@@ -22,21 +31,7 @@ function About() {
             <div className="about-main-content">
               <AnimatedText once text="✨ Who am I?" el="h1" />
               <div className="about-main-content-text">
-                <AnimatedComponent
-                  animation={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: {
-                      opacity: 1,
-                      y: 0,
-                      transition: {
-                        duration: 1.0,
-                        staggerChildren: 0.5,
-                        ease: "easeInOut",
-                        delay: "0.2",
-                      },
-                    },
-                  }}
-                >
+                <AnimatedComponent>
                   <p>
                     Working with and developing code has always been a subject
                     that captivates me deeply. The ability to craft intricate
@@ -53,53 +48,29 @@ function About() {
                     motivating force in my work.
                   </p>
                 </AnimatedComponent>
-                <AnimatedComponent
-                  animation={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: {
-                      opacity: 1,
-                      y: 0,
-                      transition: {
-                        duration: 1.0,
-                        staggerChildren: 0.5,
-                        ease: "easeInOut",
-                        delay: "0.3",
-                      },
-                    },
-                  }}
-                  className={"about-image-row"}
-                >
-                  <p>
-                    My will to move from problem to solution has guided me
-                    through diverse projects where programming and architecture
-                    have always taken center stage. Consequently, I possess
-                    extensive experience with various programming languages,
-                    including C++, Java, JavaScript, CSS, HTML, MATLAB, and
-                    Python, which only constitute a small fraction of my
-                    professional portfolio. However, the primary language I've
-                    predominantly handled is C++, which I consider particularly
-                    advantageous to master for a profound understanding of
-                    programming. This ideology has, in turn, made me highly
-                    proficient in C++, turning a challenge involving the
-                    language into something exciting to tackle.
-                  </p>
-                  <div className="about-image-row-image" />
-                </AnimatedComponent>
-                <AnimatedComponent
-                  animation={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: {
-                      opacity: 1,
-                      y: 0,
-                      transition: {
-                        duration: 1.0,
-                        staggerChildren: 0.5,
-                        ease: "easeInOut",
-                        delay: "0.4",
-                      },
-                    },
-                  }}
-                >
+                <div className={"about-image-row"}>
+                  <AnimatedComponent>
+                    <p>
+                      My will to move from problem to solution has guided me
+                      through diverse projects where programming and
+                      architecture have always taken center stage. Consequently,
+                      I possess extensive experience with various programming
+                      languages, including C++, Java, JavaScript, CSS, HTML,
+                      MATLAB, and Python, which only constitute a small fraction
+                      of my professional portfolio. However, the primary
+                      language I've predominantly handled is C++, which I
+                      consider particularly advantageous to master for a
+                      profound understanding of programming. This ideology has,
+                      in turn, made me highly proficient in C++, turning a
+                      challenge involving the language into something exciting
+                      to tackle.
+                    </p>
+                  </AnimatedComponent>
+                  <AnimatedComponent>
+                    <div className="about-image-row-image" />
+                  </AnimatedComponent>
+                </div>
+                <AnimatedComponent>
                   <p>
                     I've always possessed a desire to solve problems through
                     programming, even if I didn't always know the right
@@ -142,14 +113,7 @@ function About() {
                     once
                     text="Thanks for getting to know me!"
                     el="h1"
-                    animation={{
-                      hidden: { opacity: 0, y: 0 },
-                      visible: {
-                        opacity: 1,
-                        y: 0,
-                        transition: { duration: 0.1, staggerChildren: 0.05 },
-                      },
-                    }}
+                    animation={quoteAnimation}
                   />
                   <span style={{ opacity: "0" }}>.</span>
                 </div>

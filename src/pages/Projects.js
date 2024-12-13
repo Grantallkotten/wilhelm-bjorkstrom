@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useParams } from "react-router-dom";
 
 import SelectProject from "../components/showcaseProjects/SelectProject";
@@ -49,6 +49,31 @@ const Project = ({ fileData }) => {
     ? fileData.developers
     : 1;
 
+  const quoteAnimation = {
+    hidden: { opacity: 0, y: 0 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.1, staggerChildren: 0.05 },
+    },
+  };
+
+  const delayIndexAnimation = useCallback(
+    (index = 0) => ({
+      hidden: { opacity: 0 },
+      visible: {
+        opacity: 1,
+        transition: {
+          duration: 0.5,
+          staggerChildren: 0.5,
+          ease: "easeInOut",
+          delay: index * 0.4,
+        },
+      },
+    }),
+    []
+  );
+
   return (
     <section className="project-wrapper">
       <section
@@ -62,14 +87,6 @@ const Project = ({ fileData }) => {
               once
               text={fileData.header}
               el="h1"
-              animation={{
-                hidden: { opacity: 0, y: 20 },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.5, staggerChildren: 0.05 },
-                },
-              }}
               className="project-header"
             />
           </div>
@@ -77,7 +94,9 @@ const Project = ({ fileData }) => {
             <div>
               <h3 className="header">Date</h3>
               <div className="date">
-                <AnimatedComponent>{fileData.date}</AnimatedComponent>
+                <AnimatedComponent animation={delayIndexAnimation()}>
+                  {fileData.date}
+                </AnimatedComponent>
               </div>
             </div>
             <div>
@@ -86,19 +105,7 @@ const Project = ({ fileData }) => {
                 {Array.from({ length: numberOfDevelopers }, (_, index) => (
                   <AnimatedComponent
                     key={"developers-" + index}
-                    animation={{
-                      hidden: { opacity: 0, y: 20 },
-                      visible: {
-                        opacity: 1,
-                        y: 0,
-                        transition: {
-                          duration: 1.0,
-                          staggerChildren: 0.5,
-                          ease: "easeInOut",
-                          delay: index * 0.1,
-                        },
-                      },
-                    }}
+                    animation={delayIndexAnimation(index)}
                   >
                     <DeveloperIcon key={index} />
                   </AnimatedComponent>
@@ -111,19 +118,7 @@ const Project = ({ fileData }) => {
                 {fileData.links.map((linkItem, index) => (
                   <AnimatedComponent
                     key={"links-" + index}
-                    animation={{
-                      hidden: { opacity: 0, y: 20 },
-                      visible: {
-                        opacity: 1,
-                        y: 0,
-                        transition: {
-                          duration: 1.0,
-                          staggerChildren: 0.5,
-                          ease: "easeInOut",
-                          delay: index * 0.1,
-                        },
-                      },
-                    }}
+                    animation={delayIndexAnimation(index)}
                   >
                     <div>{ProjectLinkIcon(linkItem)}</div>
                   </AnimatedComponent>
@@ -138,6 +133,7 @@ const Project = ({ fileData }) => {
                   <AnimatedComponent
                     isVisibleOnEnter={false}
                     key={"keyword-" + index}
+                    animation={delayIndexAnimation(index)}
                   >
                     <div className="keyword-item">{keyword}</div>
                   </AnimatedComponent>
@@ -176,14 +172,7 @@ const Project = ({ fileData }) => {
                   once
                   text={fileData.quote}
                   el="span"
-                  animation={{
-                    hidden: { opacity: 0, y: 0 },
-                    visible: {
-                      opacity: 1,
-                      y: 0,
-                      transition: { duration: 0.1, staggerChildren: 0.05 },
-                    },
-                  }}
+                  animation={quoteAnimation}
                   className={"quote"}
                 />
               </div>
@@ -206,9 +195,11 @@ const Project = ({ fileData }) => {
               )}
               <div className="image-grid">
                 {fileData.images.map((image, index) => (
-                  <AnimatedComponent key={"image-grid-item-" + index}>
-                    <img src={image.link} alt={image.description} />
-                  </AnimatedComponent>
+                  <img
+                    src={image.link}
+                    alt={image.description}
+                    key={"image-grid-item-" + index}
+                  />
                 ))}
               </div>
             </div>
