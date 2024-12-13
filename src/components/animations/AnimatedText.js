@@ -18,6 +18,7 @@ const AnimatedText = ({
   text,
   el: Wrapper = "p",
   className,
+  innerClassName,
   once = true,
   repeatDelay,
   animation = defaultAnimations,
@@ -85,6 +86,7 @@ const AnimatedText = ({
                         display: isEmojiChar ? "" : "inline-block",
                         overflowWrap: "break-word",
                       }}
+                      className={innerClassName}
                     >
                       {char}
                     </motion.span>

@@ -15,12 +15,7 @@ function Contact() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        duration: 0,
-        staggerChildren: 0.5,
-        ease: "easeInOut",
-        delay: "0.3",
-      },
+      transition: { duration: 0, staggerChildren: 0.05 },
     },
   };
 
@@ -56,6 +51,7 @@ function Contact() {
                 <a href="https://www.linkedin.com/in/wilhelm-bjorkstrom/">
                   <AnimatedText
                     text="linkedin.com/in/wilhelm-bjorkstrom"
+                    innerClassName="contact-griditem-social-text-animated"
                     animation={typeInAnimation}
                   />
                 </a>
@@ -67,6 +63,7 @@ function Contact() {
                 <a href="mailto:wilhelm@bjorkstrom.org">
                   <AnimatedText
                     text="wilhelm@bjorkstrom.org"
+                    innerClassName="contact-griditem-social-text-animated"
                     animation={typeInAnimation}
                   />
                 </a>
