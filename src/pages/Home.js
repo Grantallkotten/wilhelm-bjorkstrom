@@ -31,9 +31,11 @@ function Home() {
     <section>
       <section className="home-startpage" style={{ position: "relative" }}>
         <BackgroundParticles>
-          <BigLogo />
-          <LogoName />
-          <HomeSocials />
+          <div>
+            <BigLogo />
+            <LogoName />
+            <HomeSocials />
+          </div>
           <div className="home-scroll-button-wrapper">
             <TransparentButton
               text={"My projects"}

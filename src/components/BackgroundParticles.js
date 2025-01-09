@@ -30,7 +30,19 @@ export function BackgroundParticles({ children }) {
       }}
     >
       {init ? <Particles options={particleData()} /> : null}
-      <div style={{ position: "relative", zIndex: 1 }}>{children}</div>
+      <div
+        style={{
+          position: "relative",
+          zIndex: 1,
+          height: "100%",
+          minHeight: "fit-content",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
+        {children}
+      </div>
     </section>
   );
 }
