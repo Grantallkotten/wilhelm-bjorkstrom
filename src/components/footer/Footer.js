@@ -28,7 +28,7 @@ function Footer() {
           .
         </p>
       </div>
-      <p>&copy; 2024 Wilhelm Björksrtöm.</p>
+      <p>&copy; 2025 Wilhelm Björksrtöm.</p>
     </section>
   );
 }
