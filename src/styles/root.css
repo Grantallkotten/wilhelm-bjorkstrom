@@ -65,20 +65,20 @@
   --shadow-box-x: -1rem 0 1rem var(--shadow-color);
 
   --text-primary: #292929;
-  --text-colored: #354992;
+  --text-colored: #2684ee;
 
-  --background-color-primary: #f7f9fc;
-  --background-color-secondary: #e5ebf5;
+  --background-color-primary: #fbfbfb;
+  --background-color-secondary: #e4eaf0;
 
-  --blue-color-primary: #6b86e8;
-  --blue-color-secondary: #7e91d8;
-  --purple-color-primary: #9397e0;
+  --blue-color-primary: #499eff;
+  --blue-color-secondary: #5e93d0;
+  --purple-color-primary: #d5d8fe;
 
   --blue-color-primary-transparent: rgba(89, 111, 189, 0.5);
   --blue-color-secondary-transparent: rgba(77, 93, 153, 0.5);
   --purple-color-primary-transparent: rgba(82, 84, 125, 0.5);
 
-  --gray-color-primary: #90948a;
+  --gray-color-primary: #a3aec4;
 }
 
 /*======================== Global CSS ========================*/

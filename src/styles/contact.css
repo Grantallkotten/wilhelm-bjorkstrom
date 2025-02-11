@@ -137,7 +137,7 @@
   cursor: default;
 }
 
-@media (prefers-color-scheme: light) {
+[data-theme="light"] {
   .wave-text {
     color: var(--background-color-primary);
     text-shadow: 0px 0px 2px var(--background-color-primary);

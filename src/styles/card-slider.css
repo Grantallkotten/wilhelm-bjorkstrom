@@ -33,10 +33,13 @@
   transition: var(--transition-speed);
 }
 
+[data-theme="light"] .card {
+  color: var(--background-color-primary);
+}
+
 .card:hover {
   transform: translateY(-1rem);
   background-color: var(--blue-color-primary);
-  color: var(--text-primary);
   transition: background-color var(--transition-speed-slow) ease-in-out;
 }
 

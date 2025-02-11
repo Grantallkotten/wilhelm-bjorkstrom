@@ -7,7 +7,7 @@
   overflow: hidden;
 }
 
-@media (prefers-color-scheme: light) {
+[data-theme="light"] {
   :root {
     --text-primary: #292929;
     --background-color-primary: #f7f9fc;

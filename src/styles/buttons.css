@@ -52,7 +52,7 @@
   animation: none;
 }
 
-@media (prefers-color-scheme: light) {
+[data-theme="light"] {
   .transparent-button {
     color: var(--background-color-primary);
   }

@@ -110,7 +110,7 @@
   transition: var(--transition-speed);
 }
 
-@media (prefers-color-scheme: light) {
+[data-theme="light"] {
   .navbar-a:hover {
     background-color: var(--background-color-secondary);
   }

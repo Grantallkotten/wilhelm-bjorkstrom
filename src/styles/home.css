@@ -75,7 +75,7 @@ h1 {
   position: absolute;
 }
 
-@media (prefers-color-scheme: light) {
+[data-theme="light"] {
   .home-startpage {
     background-image: url("../../public/images/clouds.jpg");
   }
