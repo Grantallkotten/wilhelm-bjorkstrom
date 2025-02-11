@@ -1,5 +1,5 @@
 :root {
-  --hover-translate: 80px;
+  --hover-translate: 1vw;
 }
 
 .slider-wrapper {
@@ -29,7 +29,7 @@
   /*To distinguis  cards from each other*/
   background-color: var(--blue-color-secondary);
   border-radius: var(--border-radius-small);
-  box-shadow: var(--shadow-box-x);
+  box-shadow: var(--shadow-box-card);
   transition: var(--transition-speed);
 }
 

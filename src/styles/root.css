@@ -9,6 +9,7 @@
 
   --shadow-color: #00000060;
   --shadow-box-x: -1rem 0 1rem var(--shadow-color);
+  --shadow-box-card: -5px 0 10px var(--shadow-color);
 
   --text-primary: #ffffff;
   --text-colored: #596fbd;
