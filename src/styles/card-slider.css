@@ -73,12 +73,21 @@
   object-fit: cover;
 
   border: none;
+  transition: all var(--transition-speed);
 
   background: linear-gradient(
     to bottom right,
     var(--background-color-secondary),
     #44465a
   );
+}
+
+.card img {
+  transition: transform var(--card-zoom-transition-speed) ease-in-out;
+}
+
+.card:hover img {
+  transform: scale(1.05);
 }
 
 .slider::-webkit-scrollbar {
@@ -135,7 +144,7 @@
 
   /* All siblings after the hoverd card */
   .card:hover ~ .card {
-    transition: var(--transition-speed);
+    transition: all var(--transition-speed);
   }
 
   h2 span {

@@ -167,12 +167,14 @@
 
   color: inherit;
   text-decoration: none;
-  transition: all var(--transition-speed-fast) ease-in;
+  transition: all var(--transition-speed-fast) ease-in-out;
+
+  overflow: hidden;
 }
 
 .select-project-card:hover {
   scale: var(--svg-scale-small);
-  box-shadow: 0 0 10px 8px var(--shadow-color);
+  box-shadow: 0 0 6px 3px var(--shadow-color);
 }
 
 .select-project-card img {
@@ -184,6 +186,12 @@
   border-radius: inherit;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+
+  transition: transform var(--card-zoom-transition-speed) ease-in-out;
+}
+
+.select-project-card:hover img {
+  transform: scale(1.05);
 }
 
 .select-project-card-content {

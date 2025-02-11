@@ -32,6 +32,8 @@
   --transition-speed-slow: 300ms;
   --transition-speed-realy-slow: 500ms;
 
+  --card-zoom-transition-speed: 750ms;
+
   --banner-height: 0vh;
 
   --border-radius-small: 8px;
