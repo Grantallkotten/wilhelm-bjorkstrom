@@ -142,11 +142,13 @@ const Project = ({ fileData }) => {
             </div>
           </div>
           <div className="project-information-content">
-            <div className="row">
-              <AnimatedComponent>
-                <p>{fileData.description}</p>
-              </AnimatedComponent>
-            </div>
+            {fileData && fileData.description.length > 0 && (
+              <div className="row">
+                <AnimatedComponent>
+                  <p>{fileData.description}</p>
+                </AnimatedComponent>
+              </div>
+            )}
             <div className="grid-row">
               <div className="left">
                 <AnimatedComponent>
@@ -193,7 +195,7 @@ const Project = ({ fileData }) => {
                   <VideoContainer embedID={fileData.video.embed_ID} />
                 </div>
               )}
-              {fileData.images && fileData.images.length !== 0 && (
+              {fileData.images && fileData.images.length > 0 && (
                 <div className="image-grid">
                   {fileData.images.map((image, index) => (
                     <img

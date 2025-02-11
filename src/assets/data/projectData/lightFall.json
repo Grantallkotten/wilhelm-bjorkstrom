@@ -1,0 +1,34 @@
+{
+  "filename": "lightFall",
+  "banner_image": {
+    "link": "/images/projectImages/lightFall/background.jpg"
+  },
+  "date": "2025-02-01",
+  "developers": 4,
+  "links": [
+    {
+      "type": "GitHub",
+      "link": "https://github.com/rasmussvala/Bigmode-Game-Jam-2025"
+    },
+    {
+      "type": "ExternalLink",
+      "link": "https://rasmussvala.itch.io/lightfall"
+    }
+  ],
+  "keywords": ["Godot", "Game jam", "2D platformer", "Trial-and-error game"],
+  "header": "Lightfall",
+  "main_image": {
+    "link": "/images/projectImages/lightFall/logo.jpg",
+    "header": "Implementation",
+    "description": "A trial-and-error 2D platformer built in Godot, where you play as a light source, collecting batteries to stay alive. Created from the ground up in just four days during a game jam, this project was a fun and experimental challenge."
+  },
+  "images": [],
+  "description": "",
+  "description_short": "A 2D platformer where you play as a light source and must collect batteries to stay alive.",
+  "quote": "Play the game on our itch.io!",
+  "result": {},
+  "video": {
+    "title": "",
+    "embed_ID": ""
+  }
+}
