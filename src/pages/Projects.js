@@ -193,15 +193,17 @@ const Project = ({ fileData }) => {
                   <VideoContainer embedID={fileData.video.embed_ID} />
                 </div>
               )}
-              <div className="image-grid">
-                {fileData.images.map((image, index) => (
-                  <img
-                    src={image.link}
-                    alt={image.description}
-                    key={"image-grid-item-" + index}
-                  />
-                ))}
-              </div>
+              {fileData.images && fileData.images.length !== 0 && (
+                <div className="image-grid">
+                  {fileData.images.map((image, index) => (
+                    <img
+                      src={image.link}
+                      alt={image.description}
+                      key={"image-grid-item-" + index}
+                    />
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </section>
