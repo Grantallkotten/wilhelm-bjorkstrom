@@ -1,0 +1,34 @@
+{
+  "filename": "christmasGame",
+  "banner_image": {
+    "link": "/images/projectImages/christmasTimer/background.jpg"
+  },
+  "date": "2024-12-22",
+  "developers": 1,
+  "links": [
+    {
+      "type": "GitHub",
+      "link": "https://github.com/Grantallkotten/Christmas-Timer"
+    },
+    {
+      "type": "ExternalLink",
+      "link": "https://christmas-timer-hazel.vercel.app/"
+    }
+  ],
+  "keywords": ["React", "Christmas", "JavaScript"],
+  "header": "A Christmas Game Timer",
+  "main_image": {
+    "link": "/images/projectImages/christmasTimer/animation.webp",
+    "header": "Implementation",
+    "description": "The page was built using React to provide a smooth and user-friendly interface for playing the Christmas gift game over the holidays. With a clean design and responsive layout, it ensures an enjoyable experience for all players. The interface makes it easy to set time intervals, generating random round durations for an unpredictable and exciting game. React’s dynamic rendering keeps everything fast and interactive, making the game simple to manage while adding to the holiday fun."
+  },
+  "images": [],
+  "description": "A page designed to play the Christmas gift game. It allows users to enter both the maximum and minimum time (in minutes) for each round. Based on the times entered, a randomly chosen number of minutes will be selected within the range to create an unpredictable and fun gameplay experience. Users can fill in the time intervals below and start the game!",
+  "description_short": "A page designed to play the Christmas gift game.",
+  "quote": "The game is available for free use!",
+  "result": {},
+  "video": {
+    "title": "",
+    "embed_ID": ""
+  }
+}
