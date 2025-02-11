@@ -11,6 +11,7 @@ import TransparentButton from "../components/TransparentButton";
 import BackgroundParticles from "../components/BackgroundParticles";
 import WaveContainerRight from "../components/WaveContainerRight";
 import TextButton from "../components/TextButton";
+import ThemeMode from "../components/ThemeMode";
 
 import "../styles/home.css";
 
@@ -35,13 +36,14 @@ function Home() {
             <BigLogo />
             <LogoName />
             <HomeSocials />
+            <ThemeMode />
           </div>
           <div className="home-scroll-button-wrapper">
             <TransparentButton
               text={"My projects"}
               className={"down-arrow-infinite-icon"}
               onClick={scrollToRefFunction}
-              style={{ position: "absolute", bottom: "4%" }}
+              style={{ position: "absolute", bottom: "4%", color: "white" }}
               icon={"🡫"}
             />
           </div>
