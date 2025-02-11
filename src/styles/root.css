@@ -32,6 +32,8 @@
   --transition-speed-slow: 300ms;
   --transition-speed-realy-slow: 500ms;
 
+  --banner-height: 0vh;
+
   --border-radius-small: 8px;
   --border-radius-medium: 12px;
   --border-radius-big: 16px;

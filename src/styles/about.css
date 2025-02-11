@@ -8,7 +8,7 @@
 }
 
 .about-banner {
-  height: 50vh;
+  height: var(--banner-height);
   background-color: var(--background-color-secondary);
 
   background-size: cover;

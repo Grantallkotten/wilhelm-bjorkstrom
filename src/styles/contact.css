@@ -6,7 +6,7 @@
 }
 
 .contact-banner {
-  height: 50vh;
+  height: var(--banner-height);
   background-color: var(--background-color-secondary);
 
   background-size: cover;
@@ -20,10 +20,14 @@
 
 .contact-content-wrapper {
   position: relative;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-content {
-  width: calc(100%);
+  width: 100%;
   height: 100%;
 
   margin: 0;
@@ -31,7 +35,7 @@
   background-color: var(--background-color-secondary);
 
   display: flex;
-  height: fit-content;
+  flex: 1;
 }
 
 .contact-information {
