@@ -4,19 +4,19 @@ import "../styles/theme-mode.css";
 
 function ThemeMode() {
   const getInitialTheme = () => {
-    return (
-      localStorage.getItem("theme") ||
-      (window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light")
-    );
+    if (typeof window !== "undefined" && window.matchMedia) {
+      return window.matchMedia("(prefers-color-scheme: light)").matches
+        ? "light"
+        : "dark";
+    }
+    return "dark";
   };
 
   const [theme, setTheme] = useState(getInitialTheme);
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme); // Apply theme
-    localStorage.setItem("theme", theme); // Save theme choice
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   return (
