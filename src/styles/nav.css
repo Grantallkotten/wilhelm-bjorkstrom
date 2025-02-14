@@ -11,6 +11,8 @@
   transition: width var(--transition-speed) ease;
   overflow: hidden;
   white-space: nowrap;
+
+  box-shadow: 4px 0px 8px var(--shadow-color);
 }
 
 .navbar-ul {

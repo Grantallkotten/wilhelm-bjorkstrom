@@ -7,7 +7,7 @@
   font-size: 1.2rem;
   background-color: var(--background-color-primary);
 
-  --shadow-color: #00000060;
+  --shadow-color: #00000035;
   --shadow-box-x: -1rem 0 1rem var(--shadow-color);
   --shadow-box-card: -5px 0 10px var(--shadow-color);
 
