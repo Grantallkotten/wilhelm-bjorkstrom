@@ -30,6 +30,7 @@
 
 .about-me-home-wrapper {
   height: 80vh;
+  max-height: 700px;
   background-color: var(--background-color-secondary);
   display: flex;
   justify-content: space-between;
@@ -62,6 +63,9 @@ h1 {
   border-radius: 50%;
   height: 25vw;
   width: 25vw;
+
+  max-height: 700px;
+  max-width: 700px;
 
   background-size: cover;
   background-position: center;

@@ -21,6 +21,7 @@
   flex-direction: column;
   width: 70vh;
   height: 88vh;
+  max-height: 700px;
   min-height: fit-content;
   padding: 1.5rem;
   color: var(--text-primary);
