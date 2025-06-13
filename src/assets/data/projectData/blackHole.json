@@ -45,14 +45,6 @@
       "header": ""
     },
     {
-      "link": "/images/projectImages/blackHole/me_and_emil.JPEG",
-      "header": ""
-    },
-    {
-      "link": "/images/projectImages/blackHole/presentation.JPEG",
-      "header": ""
-    },
-    {
       "link": "/images/projectImages/blackHole/interstellar_kerr.png",
       "header": ""
     },
@@ -72,8 +64,21 @@
       "link": "/images/projectImages/blackHole/disk.png",
       "header": ""
     },
+
     {
       "link": "/images/projectImages/blackHole/Schwarzschild_end_3.png",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/blackHole/me_and_emil.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/blackHole/presentation.jpg",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/blackHole/me_and_emil_close.jpg",
       "header": ""
     }
   ],
