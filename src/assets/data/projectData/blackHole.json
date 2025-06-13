@@ -1,0 +1,84 @@
+{
+  "filename": "blackHole",
+  "banner_image": {
+    "link": "/images/projectImages/blackHole/first_black_hole.png"
+  },
+  "date": "2025-06-12",
+  "developers": 2,
+  "links": [
+    {
+      "type": "GitHub",
+      "link": ""
+    }
+  ],
+  "keywords": [
+    "Black holes",
+    "Visualisation",
+    "Master thesis",
+    "OpenSpace",
+    "C++",
+    "Multithreading",
+    "Performance",
+    "Astrophysics",
+    "CUDA",
+    "OpenGL",
+    "GLSL",
+    "Python"
+  ],
+  "header": "An Interactive Black Hole Visualization in OpenSpace",
+  "main_image": {
+    "link": "/images/projectImages/blackHole/3D_objects.png",
+    "header": "Header in progress..,",
+    "description": "Text in progress..."
+  },
+  "images": [
+    {
+      "link": "/images/projectImages/blackHole/black_hole.webp",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/blackHole/galaxy.png",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/blackHole/schwarzschild.png",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/blackHole/me_and_emil.JPEG",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/blackHole/presentation.JPEG",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/blackHole/interstellar_kerr.png",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/blackHole/kerr_disk.png",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/blackHole/first_black_hole.png",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/blackHole/disk.png",
+      "header": ""
+    },
+    {
+      "link": "/images/projectImages/blackHole/Schwarzschild_end_3.png",
+      "header": ""
+    }
+  ],
+  "description": "Text in progress...",
+  "description_short": "Text in progress...",
+  "quote": "Text in progress...",
+  "result": {
+    "header": "Header in progress..,",
+    "description": "Text in progress..."
+  },
+  "video": {}
+}
