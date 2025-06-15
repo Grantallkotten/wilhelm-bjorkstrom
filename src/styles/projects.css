@@ -523,3 +523,15 @@
     display: none;
   }
 }
+
+@media only screen and (min-width: 1800px) {
+  .select-project-container-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (min-width: 2600px) {
+  .select-project-container-row {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
