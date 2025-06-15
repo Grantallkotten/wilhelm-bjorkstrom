@@ -8,7 +8,7 @@
   "links": [
     {
       "type": "GitHub",
-      "link": ""
+      "link": "https://github.com/OpenSpace/OpenSpace/tree/thesis/2025/black-hole"
     }
   ],
   "keywords": [
@@ -28,8 +28,8 @@
   "header": "An Interactive Black Hole Visualization in OpenSpace",
   "main_image": {
     "link": "/images/projectImages/blackHole/3D_objects.png",
-    "header": "Header in progress..,",
-    "description": "Text in progress..."
+    "header": "Technical Implementation and Scientific Basis",
+    "description": "The software implementation utilized a combination of C++, CUDA, OpenGL, GLSL, and Python. GPU-accelerated ray tracing techniques were applied to simulate photon trajectories in curved spacetime, using both the Schwarzschild and Kerr metrics to account for non-rotating and rotating black holes, respectively. The visualization incorporates key relativistic phenomena such as gravitational lensing, time dilation, and redshift, enabled through high-performance computation and mathematically accurate modeling."
   },
   "images": [
     {
@@ -82,12 +82,12 @@
       "header": ""
     }
   ],
-  "description": "Text in progress...",
-  "description_short": "Text in progress...",
-  "quote": "Text in progress...",
+  "description": "As part of a thesis project conducted in collaboration with the OpenSpace organization, a real-time visualization system for simulating black holes was developed. The purpose of the project was to create an interactive and scientifically accurate tool for representing relativistic effects near black holes, aimed at supporting both educational outreach and scientific communication. The system focuses on visualizing the appearance of black holes from a distant observer's perspective, grounded in theoretical models from general relativity.",
+  "description_short": "My master's thesis developed a real-time tool to visualize black holes and relativistic effects, supporting education and science communication.",
+  "quote": "Let's see what can't be seen!",
   "result": {
-    "header": "Header in progress..,",
-    "description": "Text in progress..."
+    "header": "Visualization Results",
+    "description": "The results include visualizations of both Schwarzschild and Kerr black holes, highlighting how spin influences the distortion of surrounding light and the accretion disk's appearance. Example outputs from the system are shown below, including frames generated during the thesis defense. These visuals demonstrate the system's capability to convey complex scientific concepts with clarity and visual fidelity."
   },
   "video": {}
 }
