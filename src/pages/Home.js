@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import AnimatedText from "../components/animations/AnimatedText";
 import AnimatedComponent from "../components/animations/AnimatedComponent";
@@ -14,6 +14,7 @@ import TextButton from "../components/TextButton";
 import ThemeMode from "../components/ThemeMode";
 
 import "../styles/home.css";
+import BlackHoleGL from "../showProjects/blackHoleGL/BlackHoleGL";
 
 function Home() {
   const navigate = useNavigate();
@@ -27,6 +28,24 @@ function Home() {
       });
     }
   };
+
+  const blackHoleWrapperRef = useRef(null);
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    if (!blackHoleWrapperRef.current) return;
+
+    const observer = new ResizeObserver((entries) => {
+      for (let entry of entries) {
+        const { width, height } = entry.contentRect;
+        setDimensions({ width, height });
+      }
+    });
+
+    observer.observe(blackHoleWrapperRef.current);
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section>
@@ -89,6 +108,12 @@ function Home() {
       </div>
       <div ref={scrollToRef} style={{ height: "fit-content" }}>
         <CardSlider />
+      </div>
+      <div
+        style={{ width: "90vh", height: "90vh ", backgroundColor: "black" }}
+        ref={blackHoleWrapperRef}
+      >
+        <BlackHoleGL width={dimensions.width} height={dimensions.height} />
       </div>
     </section>
   );
