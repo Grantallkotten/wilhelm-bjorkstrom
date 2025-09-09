@@ -35,7 +35,7 @@ Feel free to clone the repo and run it locally:
 
 ```bash
 git clone https://github.com/Grantallkotten/wilhelm-bjorkstrom.git
-cd your-portfolio
+cd wilhelm-bjorkstrom
 npm install
 npm start
 ```
