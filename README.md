@@ -34,7 +34,7 @@ Check it out here → [https://wilhelm-bjorkstrom.vercel.app](https://wilhelm-bj
 Feel free to clone the repo and run it locally:
 
 ```bash
-git clone https://github.com/your-username/your-portfolio.git
+git clone https://github.com/Grantallkotten/wilhelm-bjorkstrom.git
 cd your-portfolio
 npm install
 npm start
